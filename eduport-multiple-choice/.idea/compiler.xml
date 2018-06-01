@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="eduport-mc-checker_main" target="1.8" />
+      <module name="eduport-mc-checker_test" target="1.8" />
+      <module name="eduport-multiple-_main" target="1.8" />
+      <module name="eduport-multiple-_test" target="1.8" />
+      <module name="edutor-eduport-mc-checker_main" target="1.8" />
+      <module name="edutor-eduport-mc-checker_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

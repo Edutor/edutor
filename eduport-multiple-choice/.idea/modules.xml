@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-multiple-choice.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-multiple-choice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-multiple-choice_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-multiple-choice_main.iml" group="eduport-multiple-choice" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-multiple-choice_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-multiple-choice_test.iml" group="eduport-multiple-choice" />
+    </modules>
+  </component>
+</project>

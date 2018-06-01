@@ -1,0 +1,54 @@
+buildscript {
+    ext.kotlin_version = '1.2.41'
+    ext.eduport_version = '0.10.0'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.junit.platform:junit-platform-gradle-plugin:1.1.0"
+    }
+}
+
+group 'dk.edutor'
+version '0.10.0'
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+apply plugin: 'maven-publish'
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    maven { url myMavenRepoReadUrl }
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    compile "dk.edutor:eduport:$eduport_version"
+    //testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'io.kotlintest:kotlintest-runner-junit5:3.0.0'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+publishing {
+    repositories {
+        mavenLocal()
+        maven { url myMavenRepoWriteUrl }
+    }
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}

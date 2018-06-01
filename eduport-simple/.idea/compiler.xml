@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="eduport-simple_main" target="1.8" />
+      <module name="eduport-simple_test" target="1.8" />
+      <module name="eduport-simplechecker_main" target="1.8" />
+      <module name="eduport-simplechecker_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
