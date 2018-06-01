@@ -43,13 +43,14 @@ fun Routing.quest() {
         result.persist()
         val assesment = result.feedback
         if (assesment == null) call.respond(HttpStatusCode.BadRequest, "Feedback unavailable")
-        //else call.respond(assesment)
-        else call.respond(result)
+        else call.respond(assesment)
+        // else call.respond(result)
         }
       }
     }
 
   post("/evaluate/FILE-MP") {
+    println("Uploading")
     val multiPart = call.receiveMultipart()
     var filename = ""
     var fileContent = ""
@@ -63,7 +64,8 @@ fun Routing.quest() {
           }
         }
       }
-    call.respond(Pair(filename, fileContent))
+    println(fileContent)
+    call.respond(fileContent)
     }
 
   post("/evaluate/FILE") {

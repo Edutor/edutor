@@ -5,21 +5,21 @@
 ### MySql
 
 To install and/or run MySql server in Vagrant:
-Start a terminal in the `data` folder and write:
+Start a terminal in the `edudata` folder and write:
 
 ```bash
-data$ vargrant up
+edudata$ vargrant up
 ```
 
 The server can be stopped with:
 
 ```bash
-data$ vagrant halt
+edudata$ vagrant halt
 ```
 
 To access the server:
 ```bash
-data$ vagrant ssh
+ududata$ vagrant ssh
 vagrant@edudata:~$ mysql -uroot -p
 Password: _
 ```

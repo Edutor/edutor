@@ -7,7 +7,7 @@ const val KEY = "SIMPLE"
 
 class SimpleChecker : Port {
   override fun evaluate(solution: Solution): Solution {
-    if (!(solution is Text.Solution)) throw IllegalArgumentException("Solution should be string")
+    if (!(solution is Text.Solution)) throw IllegalArgumentException("Solution should be Text")
     solution.feedback =
         if (solution.challenge.answer == solution.answer) Assessment("Impressive!", 100.0)
         else Assessment("Too bad", 0.0)

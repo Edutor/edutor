@@ -46,7 +46,7 @@ val CHALLENGES_JOINED =
     EXECUTABLE_CHALLENGES
 
 fun stringFromOptionList(list: List<Option>) =
-    list.map { "${it.text}:${it.grade}"}.joinToString(separator = ";")
+    list.map { "${it.text}:${it.grade}"}.joinToString(separator = ";") //TODO: beware of sql injection
 
 fun optionListFromString(text: String) =
     text.split(";")
@@ -55,7 +55,7 @@ fun optionListFromString(text: String) =
             Option(p[0], p[1].toDouble())
             }
 
-fun TestCase.toText() = "$input:$expected:$grade:$hidden:$timeOut"
+fun TestCase.toText() = "$input:$expected:$grade:$hidden:$timeOut" //TODO: beware of sql injection
 
 fun testCase(text: String): TestCase {
   val parts = text.split(":")
@@ -109,15 +109,15 @@ fun CHALLENGES.persist(challenge: Challenge): Challenge {
       } get CHALLENGES.id
     if (challengeId == null) throw RuntimeException("oups")
     when (challenge) {
-      is Category.Text.Challenge -> TEXT_CHALLENGES.insert {
+      is Text.Challenge -> TEXT_CHALLENGES.insert {
         it[id] = challengeId
         it[answer] = challenge.answer
         }
-      is Category.Choice.Challenge -> CHOICE_CHALLENGES.insert {
+      is Choice.Challenge -> CHOICE_CHALLENGES.insert {
         it[id] = challengeId
         it[options] = stringFromOptionList(challenge.options)
         }
-      is Category.Executable.Challenge -> EXECUTABLE_CHALLENGES.insert {
+      is Executable.Challenge -> EXECUTABLE_CHALLENGES.insert {
         it[id] = challengeId
         it[testCases] = challenge.testCases.joinToString(separator = ";") { it.toString() }
         }
@@ -126,19 +126,19 @@ fun CHALLENGES.persist(challenge: Challenge): Challenge {
     challenge.copy(id = challengeId)
     }
   else return transaction {
-    CHALLENGES.update({ CHALLENGES.id eq challenge.id }) {
+    CHALLENGES.update({ id eq challenge.id }) {
       it[portKey] = challenge.port.key
       it[description] = challenge.description
       it[question] = challenge.question
       }
     when (challenge) {
-      is Category.Text.Challenge -> TEXT_CHALLENGES.update({ id eq challenge.id }) {
+      is Text.Challenge -> TEXT_CHALLENGES.update({ id eq challenge.id }) {
         it[answer] = challenge.answer
         }
-      is Category.Choice.Challenge -> CHOICE_CHALLENGES.update({ id eq challenge.id }) {
+      is Choice.Challenge -> CHOICE_CHALLENGES.update({ id eq challenge.id }) {
         it[options] = stringFromOptionList(challenge.options)
         }
-      is Category.Executable.Challenge -> EXECUTABLE_CHALLENGES.update({ id eq challenge.id }) {
+      is Executable.Challenge -> EXECUTABLE_CHALLENGES.update({ id eq challenge.id }) {
         it[testCases] = challenge.testCases.joinToString(separator = ";") { it.toString() }
         }
       else -> throw RuntimeException("Unknown type")

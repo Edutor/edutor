@@ -4,10 +4,10 @@ import java.io.File
 fun main(args: Array<String>) {
   val org = File("/Users/AKA/Edutor/edutor-jar-tor/ExampleJars/AddGood.jar")
   val bytes = org.readBytes()
-  bytes.runAsJarIn(File("/Users/AKA/tmp"), 20) {
+  bytes.runAsJarIn(File("/Users/AKA/tmp")) {
     writeLine("2 2")
     val result = readLine(20)
-    if (result == "7") println("Hurra")
+    if (result == "4") println("Hurra")
     else println("Øv")
     }
   }

@@ -2,69 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee224e94-7c4e-4d9f-92a3-cda0598eb0fb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/dictionaries/AKA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__dk_edutor_eduport_0_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__dk_edutor_eduport_jar_0_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__dk_edutor_eduport_multiple_choice_0_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__dk_edutor_eduport_simple_0_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_ktor_ktor_gson_0_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_ktor_ktor_http_0_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_ktor_ktor_http_cio_0_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_ktor_ktor_network_0_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_ktor_ktor_server_core_0_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_ktor_ktor_server_host_common_0_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_ktor_ktor_server_netty_0_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_ktor_ktor_utils_0_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_netty_netty_buffer_4_1_19_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_netty_netty_codec_4_1_19_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_netty_netty_codec_http2_4_1_19_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_netty_netty_codec_http_4_1_19_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_netty_netty_common_4_1_19_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_netty_netty_handler_4_1_19_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_netty_netty_resolver_4_1_19_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__io_netty_netty_transport_4_1_19_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_0_22_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_io_0_22_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_jdk8_0_22_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_io_jvm_0_0_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/Solutions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/Users.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/AdminRoutes.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/view/Solutions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/src/main/resources/www/upload.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../educore/src/test/kotlin/dk/edutor/core/model/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__com_google_guava_guava_20_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__com_univocity_univocity_parsers_2_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__dk_edutor_eduport_0_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__io_kotlintest_kotlintest_assertions_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__io_kotlintest_kotlintest_core_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__io_kotlintest_kotlintest_runner_junit5_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__org_javassist_javassist_3_21_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_reflect_1_2_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_2_41.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_2_41.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_2_41.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__org_junit_platform_junit_platform_suite_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/libraries/Gradle__org_reflections_reflections_0_9_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/modules/eduport-jar_main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/modules/eduport-jar_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/src/main/kotlin/dk/edutor/eduport/jarchecker/IOProcess.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-jar/src/test/kotlin/Program.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-multiple-choice/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-multiple-choice/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-multiple-choice/.idea/modules/edutor-eduport-multiple-choice_main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eduport-multiple-choice/.idea/modules/edutor-eduport-multiple-choice_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__dk_edutor_eduport_0_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_2_41.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_2_41.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_2_41.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/Edutor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/Edutor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/Challenges.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/Challenges.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/MySqlManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/MySqlManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/AdminRoutes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/AdminRoutes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/QuestRoutes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/QuestRoutes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/src/main/resources/www/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/resources/www/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edudata/install.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../edudata/install.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eduport-jar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eduport-jar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eduport-multiple-choice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eduport-multiple-choice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eduport-multiple-choice/src/main/kotlin/dk/edutor/eduport/mc/MultipleChoiceChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../eduport-multiple-choice/src/main/kotlin/dk/edutor/eduport/mc/MultipleChoiceChecker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/simple/SimpleChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/simple/SimpleChecker.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -128,20 +79,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="25" selection-end-line="54" />
+            <state relative-caret-position="266">
+              <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleChecker.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SimpleChecker.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/simple/SimpleChecker.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state relative-caret-position="220">
+              <caret line="11" column="80" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -572,16 +523,17 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/Experiment.kt" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/simple/SimpleChecker.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/dk/edutor/eduport/simple/SimpleCheckerTest.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/dk/edutor/eduport/simple/AnotherWayToTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/simple/SimpleChecker.kt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="218" />
+    <option name="y" value="29" />
+    <option name="width" value="1638" />
+    <option name="height" value="938" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -589,7 +541,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -649,6 +600,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -885,7 +837,8 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
+    <frame x="218" y="29" width="1638" height="938" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="GfmBrowser" order="3" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -893,14 +846,13 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3940256" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3940256" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="right" id="Flutter Outline" order="4" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28125" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32907802" />
-      <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.21328124" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.083638586" />
+      <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.12637363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -914,6 +866,7 @@
       <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32907802" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -929,6 +882,44 @@
     <option name="LAST_COMMIT_MESSAGE" value="tidying up versions in build gradle" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="25" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/simple/SimpleChecker.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/dk/edutor/eduport/simple/SimpleCheckerTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
+          <folding>
+            <element signature="e#34#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/dk/edutor/eduport/simple/AnotherWayToTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1257,17 +1248,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/simple/SimpleChecker.kt">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        <state relative-caret-position="266">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/simple/SimpleChecker.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="25" selection-end-line="54" />
+        <state relative-caret-position="220">
+          <caret line="11" column="80" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="80" />
         </state>
       </provider>
     </entry>

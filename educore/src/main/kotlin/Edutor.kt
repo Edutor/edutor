@@ -53,7 +53,7 @@ fun main(args: Array<String>) {
 
         routing {
             get("/hello") {
-/* /
+/* */
                 Text.Challenge(0, SimpleChecker, "First challenge", "Who is first?", "me").persist()
                 Text.Challenge(0, SimpleChecker, "Second challenge", "Who is next?", "you").persist()
                 Choice.Challenge(
@@ -68,7 +68,7 @@ fun main(args: Array<String>) {
                         Option("UE", -40.0)
                         )
                     ).persist()
-/ */
+/* */
                 call.respond(ports.values.map { it.sayHello("Edutor") })
                 }
 

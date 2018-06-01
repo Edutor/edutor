@@ -51,9 +51,11 @@ class MySqlManager(val version: Int) : PersistenceManager {
       create(USERS)
       create(TAGS)
 
-      create(CHALLENGES, TEXT_CHALLENGES, CHOICE_CHALLENGES, EXECUTABLE_CHALLENGES)
+      create(CHALLENGES)
+      create(TEXT_CHALLENGES, CHOICE_CHALLENGES, EXECUTABLE_CHALLENGES)
 
-      create(SOLUTIONS, TEXT_SOLUTIONS, CHOICE_SOLUTIONS, EXECUTABLE_SOLUTIONS)
+      create(SOLUTIONS)
+      create(TEXT_SOLUTIONS, CHOICE_SOLUTIONS, EXECUTABLE_SOLUTIONS)
 
       PROPERTIES.version = version
       }

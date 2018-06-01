@@ -9,7 +9,7 @@ class MultipleChoiceChecker : Port {
     override fun evaluate(solution: Solution): Solution {
         if (!(solution is Choice.Solution)) throw IllegalArgumentException("Solution should be Multiple Choice")
         val score = solution.answers.sumByDouble { index -> solution.challenge.options[index].grade }
-        if (score <= 0.0) solution.feedback = Assessment("Not to good", 0.0)
+        if (score <= 0.0) solution.feedback = Assessment("Not too good", 0.0)
         else if (score < 100.0) solution.feedback = Assessment("Some right things here", score)
         else solution.feedback = Assessment("Very fine", 100.0)
       return solution
