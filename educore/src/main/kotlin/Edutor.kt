@@ -26,7 +26,7 @@ val MultipleChoiceChecker = MultipleChoiceChecker()
 val JarChecker = JarChecker()
 
 val ports = mapOf(entry(SimpleChecker), entry(MultipleChoiceChecker), entry(JarChecker))
-val db = MySqlManager(version = 2)
+val db = MySqlManager(version = 3)
 
 // data class UserSession(val user: String)
 
@@ -54,8 +54,12 @@ fun main(args: Array<String>) {
         routing {
             get("/hello") {
 /* */
-                Text.Challenge(0, SimpleChecker, "First challenge", "Who is first?", "me").persist()
-                Text.Challenge(0, SimpleChecker, "Second challenge", "Who is next?", "you").persist()
+                Text.Challenge(0, SimpleChecker, "First challenge", "Who is first?", "me")
+                  .persist()
+                  .tags = listOf(Tag("Java"), Tag("Narcissism"))
+                Text.Challenge(0, SimpleChecker, "Second challenge", "Who is next?", "you")
+                  .persist()
+                  .tags = listOf(Tag("C#"), Tag("Narcissism"))
                 Choice.Challenge(
                     0,
                     MultipleChoiceChecker,
@@ -67,7 +71,9 @@ fun main(args: Array<String>) {
                         Option("Hesso-Valais", -40.0),
                         Option("UE", -40.0)
                         )
-                    ).persist()
+                    )
+                  .persist()
+                  .tags = listOf(Tag("Java"), Tag("IoT"), Tag("3D"))
 /* */
                 call.respond(ports.values.map { it.sayHello("Edutor") })
                 }

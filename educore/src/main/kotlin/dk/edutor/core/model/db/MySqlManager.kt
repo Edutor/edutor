@@ -50,12 +50,15 @@ class MySqlManager(val version: Int) : PersistenceManager {
     transaction {
       create(USERS)
       create(TAGS)
+      create(QUESTS)
 
       create(CHALLENGES)
       create(TEXT_CHALLENGES, CHOICE_CHALLENGES, EXECUTABLE_CHALLENGES)
 
       create(SOLUTIONS)
       create(TEXT_SOLUTIONS, CHOICE_SOLUTIONS, EXECUTABLE_SOLUTIONS)
+
+      create(CHALLENGES_HAVE_TAGS)
 
       PROPERTIES.version = version
       }
@@ -68,10 +71,14 @@ class MySqlManager(val version: Int) : PersistenceManager {
 
   fun drop() {
     transaction {
-      drop(CHOICE_SOLUTIONS, TEXT_SOLUTIONS, SOLUTIONS)
-      drop(CHOICE_CHALLENGES, TEXT_CHALLENGES, CHALLENGES)
+      drop(CHALLENGES_HAVE_TAGS)
+      drop(EXECUTABLE_SOLUTIONS, CHOICE_SOLUTIONS, TEXT_SOLUTIONS)
+      drop(SOLUTIONS)
+      drop(EXECUTABLE_CHALLENGES, CHOICE_CHALLENGES, TEXT_CHALLENGES)
+      drop(CHALLENGES)
       drop(USERS)
       drop(TAGS)
+      drop(QUESTS)
       }
     }
 

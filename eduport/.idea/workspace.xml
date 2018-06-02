@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="598bc97f-dc8f-4c55-82cf-76276baaebee" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../educore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/Edutor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/Edutor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/MySqlManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/MySqlManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/Tags.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/Tags.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Challenges.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Port.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Port.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Solutions.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/view/Quests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/view/Quests.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -67,8 +65,8 @@
       <file leaf-file-name="Port.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Port.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+            <state relative-caret-position="495">
+              <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -318,7 +316,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="$USER_HOME$/.gradle/gradle.properties" value="2769755499" />
-        <entry key="$PROJECT_DIR$" value="7619713695000" />
+        <entry key="$PROJECT_DIR$" value="7622312468000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="2578537234" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="975608090" />
@@ -740,12 +738,12 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.43194443" side_tool="true" weight="0.2864259" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.56805557" weight="0.2864259" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.56805557" visible="true" weight="0.28518057" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4826389" weight="0.23850931" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="right" id="Flutter Outline" order="9" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2048611" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2048611" />
       <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.24027778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -971,8 +969,8 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Challenges.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Port.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+        <state relative-caret-position="495">
+          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
         </state>
       </provider>
     </entry>
