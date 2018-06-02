@@ -59,7 +59,7 @@ fun main(args: Array<String>) {
                   .tags = listOf(Tag("Java"), Tag("Narcissism"))
                 Text.Challenge(0, SimpleChecker, "Second challenge", "Who is next?", "you")
                   .persist()
-                  .tags = listOf(Tag("C#"), Tag("Narcissism"))
+                  .tags = listOf(Tag("C++"), Tag("Narcissism"))
                 Choice.Challenge(
                     0,
                     MultipleChoiceChecker,

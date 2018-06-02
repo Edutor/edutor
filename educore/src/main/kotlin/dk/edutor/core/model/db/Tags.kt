@@ -50,7 +50,12 @@ object CHALLENGES_HAVE_TAGS: Table() {
 
   }
 
-val CHALLENGES_HAVE_TAGS_JOINED = CHALLENGES_HAVE_TAGS innerJoin CHALLENGES_JOINED // innerJoin TAGS
+val CHALLENGES_HAVE_TAGS_JOINED =
+    CHALLENGES_HAVE_TAGS innerJoin
+    CHALLENGES leftJoin
+    TEXT_CHALLENGES leftJoin
+    CHOICE_CHALLENGES leftJoin
+    EXECUTABLE_CHALLENGES // innerJoin TAGS
 
 fun tag(row: ResultRow) = Tag(row[TAGS.code])
 

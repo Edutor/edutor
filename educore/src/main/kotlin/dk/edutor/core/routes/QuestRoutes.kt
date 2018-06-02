@@ -11,17 +11,28 @@ import io.ktor.response.respond
 import io.ktor.routing.*
 import ports
 import kurt
+import java.net.URLDecoder
 
 fun Routing.quest() {
   get ("/challenge") {
     call.respond(CHALLENGES.map { it.toSummary() })
     }
 
-  get ("/challenge/{id}") {
-    val id = call.parameters["id"]?.toIntOrNull()
-    val challenge = CHALLENGES[id]
-    if (challenge == null) call.respond(HttpStatusCode.NotFound, "No such challenge #${id}")
-    else call.respond(challenge.toDetail())
+  get ("/challenge/{query}") {
+    val tagOrId : String? = call.parameters["query"]
+    if (tagOrId == null) call.respond(CHALLENGES.map { it.toSummary() })
+    else {
+      val id = tagOrId.toIntOrNull()
+      if (id == null) {
+        val tag = Tag(URLDecoder.decode(tagOrId, "UTF-8"))
+        call.respond(CHALLENGES_HAVE_TAGS[tag].map { it.toSummary() })
+        }
+      else {
+        val challenge = CHALLENGES[id]
+        if (challenge == null) call.respond(HttpStatusCode.NotFound, "No such challenge #${id}")
+        else call.respond(challenge.toDetail())
+        }
+      }
     }
 
   post("/evaluate/{dtype}") {

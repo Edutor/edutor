@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="598bc97f-dc8f-4c55-82cf-76276baaebee" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../educore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/gradlew" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/Edutor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/Edutor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/MySqlManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/MySqlManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/Tags.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/Tags.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/view/Quests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/view/Quests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/QuestRoutes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/QuestRoutes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/src/test/kotlin/dk/edutor/core/model/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/test/kotlin/dk/edutor/core/model/Main.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
