@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7bc83e5-7ecd-4bfe-aaf5-7525419c0a00" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../educore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/Edutor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/Edutor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/Challenges.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/Challenges.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/MySqlManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/MySqlManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/AdminRoutes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/AdminRoutes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/QuestRoutes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/QuestRoutes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/src/main/resources/www/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/resources/www/upload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edudata/install.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../edudata/install.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eduport-jar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eduport-jar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eduport-jar/src/test/kotlin/Program.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../eduport-jar/src/test/kotlin/Program.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/mc/MultipleChoiceChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/mc/MultipleChoiceChecker.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eduport-simple/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eduport-simple/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eduport-simple/src/main/kotlin/dk/edutor/eduport/simple/SimpleChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../eduport-simple/src/main/kotlin/dk/edutor/eduport/simple/SimpleChecker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eduport/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eduport/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -75,8 +63,8 @@
       <file leaf-file-name="MultipleChoiceChecker.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/mc/MultipleChoiceChecker.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+            <state relative-caret-position="140">
+              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding>
                 <element signature="e#30#92#0" expanded="true" />
               </folding>
@@ -535,7 +523,7 @@
     <option name="x" value="196" />
     <option name="y" value="48" />
     <option name="width" value="1487" />
-    <option name="height" value="877" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -874,21 +862,21 @@
     <option name="totallyTimeSpent" value="9463000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="196" y="48" width="1487" height="877" extended-state="0" />
+    <frame x="196" y="48" width="1487" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="GfmBrowser" order="4" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50390625" side_tool="true" visible="true" weight="0.4022416" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50390625" side_tool="true" visible="true" weight="0.17327766" />
       <window_info anchor="right" id="Maven Projects" order="9" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49609375" weight="0.32859176" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="right" id="Flutter Outline" order="0" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26227304" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09751177" />
       <window_info anchor="right" id="Gradle" order="11" sideWeight="0.49788135" visible="true" weight="0.17686617" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -898,17 +886,17 @@
       <window_info anchor="right" id="Flutter Inspector" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32919255" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="12" />
+      <window_info anchor="right" id="Database" order="10" />
       <window_info anchor="right" x="0" y="0" width="270" height="577" id="Documentation" order="13" sideWeight="0.50211865" side_tool="true" visible="true" weight="0.17109375" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
-      <window_info anchor="right" id="Database" order="10" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49921876" weight="0.32859176" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32919255" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Theme Preview" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
@@ -932,6 +920,37 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/mc/MultipleChoiceChecker.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+          <folding>
+            <element signature="e#30#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/dk/edutor/eduport/mc/MultipleChoiceCheckerTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/mc/MultipleChoiceChecker.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1276,8 +1295,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/mc/MultipleChoiceChecker.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+        <state relative-caret-position="140">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding>
             <element signature="e#30#92#0" expanded="true" />
           </folding>
