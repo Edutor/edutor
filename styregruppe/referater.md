@@ -4,7 +4,7 @@
 
 Til stede var JPBP, LBP, CHU, AKA og CNLS
 
-AKA præsenterede projektets forløb ind til videre med fokus på de tre
+AKA præsenterede projektets forløb ind til videre med udgangspunkt i de tre
 fokusområder:
 
  * Udvikle et værktøj til automastisk evaluering af opgaver
