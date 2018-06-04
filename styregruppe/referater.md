@@ -30,9 +30,9 @@ Teamet fik af LBP lov til at oprette et rimeligt antal virtuelle servere.
 JPBP efterlyste klarere mål for dokumentation af projektets gennemførelse.
 Det blev besluttet at følgende skulle opdateres løbende:
 
- 1 Erfaringer i forhold til metode (XP) evt. i blog el. lign.
- 2 Erfaringer og best practises omkring CI og CD for projektet
- 3 Dokumentation af systemet med henblik på senere videreudvikling.
+ 1. Erfaringer i forhold til metode (XP) evt. i blog el. lign.
+ 2. Erfaringer og best practises omkring CI og CD for projektet
+ 3. Dokumentation af systemet med henblik på senere videreudvikling.
 
 Dette skal gerne munde ud i papers om
 
