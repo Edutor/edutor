@@ -3,8 +3,8 @@
 * [4. juni 2018](#2018-06-04)
 * [31. august 2018](#2018-08-31)
 
-## 2018-06-04 09:30-11:00
 <a id="2018-06-04"/>
+## 2018-06-04 09:30-11:00
 Til stede var JPBP, LBP, CHU, AKA og CNLS
 
 AKA præsenterede projektets forløb ind til videre med udgangspunkt i de tre
@@ -47,5 +47,5 @@ inklusive opsætning ad CI/CD kæde frem for at udvide antallet af opgavetyper.
 Dog bør behov for konkrete opgavetyper,
 med henblik på anvendelse i efteråret stadig prioriteres.  
 
-## 2018-08-31 12:30-14:00
 <a id="2018-08-31"/>
+## 2018-08-31 12:30-14:00
