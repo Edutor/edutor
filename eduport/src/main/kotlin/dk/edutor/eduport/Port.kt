@@ -60,3 +60,4 @@ class WebAssessment(
         val percentage : Double,
         val tests: Map<String,LauncherTestResult>
 ) : Assessment(explanation, grade)
+

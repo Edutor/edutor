@@ -2,7 +2,7 @@ buildscript {
     ext {
         kotlin_version = '1.2.41'
         hibernate_version = '5.2.15.Final'
-        mysql_version = '5.1.46'
+        mysql_version = '6.0.6'
         ktor_version = '0.9.2'
 
         eduport_version = '0.10.0'
@@ -53,6 +53,7 @@ dependencies {
     compile "dk.edutor:eduport-jar:$eduport_version"
     compile "dk.edutor:eduport-simple:$eduport_version"
     compile "dk.edutor:eduport-multiple-choice:$eduport_version"
+    compile "dk.edutor:eduport-webchecker:$eduport_version"
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
     }

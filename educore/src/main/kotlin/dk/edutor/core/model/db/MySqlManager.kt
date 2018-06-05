@@ -33,8 +33,8 @@ class MySqlManager(val version: Int) : PersistenceManager {
 
   init {
     configuration.load(this.javaClass.classLoader.getResourceAsStream("exposed.properties"))
-    Database.connect("jdbc:mysql://localhost:3306/edutor",
-        driver = "com.mysql.jdbc.Driver",
+    Database.connect(url = configuration["url", ""],
+        driver = configuration["driver", ""],
         user = configuration["user", ""],
         password = configuration["password", ""]
         )
@@ -53,10 +53,10 @@ class MySqlManager(val version: Int) : PersistenceManager {
       create(QUESTS)
 
       create(CHALLENGES)
-      create(TEXT_CHALLENGES, CHOICE_CHALLENGES, EXECUTABLE_CHALLENGES)
+      create(TEXT_CHALLENGES, CHOICE_CHALLENGES, EXECUTABLE_CHALLENGES, URL_CHALLENGES)
 
       create(SOLUTIONS)
-      create(TEXT_SOLUTIONS, CHOICE_SOLUTIONS, EXECUTABLE_SOLUTIONS)
+      create(TEXT_SOLUTIONS, CHOICE_SOLUTIONS, EXECUTABLE_SOLUTIONS, URL_SOLUTIONS)
 
       create(CHALLENGES_HAVE_TAGS)
 
@@ -72,9 +72,9 @@ class MySqlManager(val version: Int) : PersistenceManager {
   fun drop() {
     transaction {
       drop(CHALLENGES_HAVE_TAGS)
-      drop(EXECUTABLE_SOLUTIONS, CHOICE_SOLUTIONS, TEXT_SOLUTIONS)
+      drop(EXECUTABLE_SOLUTIONS, CHOICE_SOLUTIONS, TEXT_SOLUTIONS, URL_SOLUTIONS)
       drop(SOLUTIONS)
-      drop(EXECUTABLE_CHALLENGES, CHOICE_CHALLENGES, TEXT_CHALLENGES)
+      drop(EXECUTABLE_CHALLENGES, CHOICE_CHALLENGES, TEXT_CHALLENGES, URL_CHALLENGES)
       drop(CHALLENGES)
       drop(USERS)
       drop(TAGS)
@@ -86,10 +86,14 @@ class MySqlManager(val version: Int) : PersistenceManager {
     transaction {
       CHOICE_CHALLENGES.deleteAll()
       TEXT_CHALLENGES.deleteAll()
+      EXECUTABLE_CHALLENGES.deleteAll()
+      URL_CHALLENGES.deleteAll()
       CHALLENGES.deleteAll()
 
       CHOICE_SOLUTIONS.deleteAll()
       TEXT_SOLUTIONS.deleteAll()
+      EXECUTABLE_SOLUTIONS.deleteAll()
+      URL_SOLUTIONS.deleteAll()
       SOLUTIONS.deleteAll()
       }
     }
