@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="educore_main" target="1.8" />
+      <module name="educore_test" target="1.8" />
+      <module name="eduport-jar_main" target="1.8" />
+      <module name="eduport-jar_test" target="1.8" />
+      <module name="eduport-multiple-choice_main" target="1.8" />
+      <module name="eduport-multiple-choice_test" target="1.8" />
+      <module name="eduport-simple_main" target="1.8" />
+      <module name="eduport-simple_test" target="1.8" />
+      <module name="eduport-webchecker_main" target="1.8" />
+      <module name="eduport-webchecker_test" target="1.8" />
+      <module name="eduport_main" target="1.8" />
+      <module name="eduport_test" target="1.8" />
+      <module name="edutool_main" target="1.8" />
+      <module name="edutool_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

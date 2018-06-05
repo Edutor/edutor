@@ -6,6 +6,7 @@ import dk.edutor.eduport.Category.*
 import dk.edutor.eduport.simple.SimpleChecker
 import dk.edutor.eduport.mc.MultipleChoiceChecker
 import dk.edutor.eduport.jarchecker.JarChecker
+import dk.edutor.eduport.webchecker.WebChecker
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.content.*
@@ -17,15 +18,17 @@ import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import io.ktor.sessions.*
+import java.nio.file.Files
+import java.nio.file.Paths
 import java.text.DateFormat
-
 
 fun entry(port: Port) = port.key to port
 val SimpleChecker = SimpleChecker()
 val MultipleChoiceChecker = MultipleChoiceChecker()
 val JarChecker = JarChecker()
+val WebChecker = WebChecker()
 
-val ports = mapOf(entry(SimpleChecker), entry(MultipleChoiceChecker), entry(JarChecker))
+val ports = mapOf(entry(SimpleChecker), entry(MultipleChoiceChecker), entry(JarChecker), entry(WebChecker))
 val db = MySqlManager(version = 3)
 
 // data class UserSession(val user: String)
@@ -93,4 +96,3 @@ fun main(args: Array<String>) {
     }
     server.start(wait = true)
 }
-

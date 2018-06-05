@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="eduport-multiple-choice" external.linked.project.path="$MODULE_DIR$/../../eduport-multiple-choice" external.root.project.path="$MODULE_DIR$/../../eduport-multiple-choice" external.system.id="GRADLE" external.system.module.group="dk.edutor" external.system.module.version="0.10.0" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../eduport-multiple-choice">
+      <excludeFolder url="file://$MODULE_DIR$/../../eduport-multiple-choice/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../eduport-multiple-choice/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../eduport-multiple-choice/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
