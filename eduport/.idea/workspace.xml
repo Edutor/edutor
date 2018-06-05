@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="598bc97f-dc8f-4c55-82cf-76276baaebee" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../educore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/Edutor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/Edutor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/Tags.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/model/db/Tags.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/QuestRoutes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/dk/edutor/core/routes/QuestRoutes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../educore/src/test/kotlin/dk/edutor/core/model/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/test/kotlin/dk/edutor/core/model/Main.kt" afterDir="false" />
-    </list>
+    <list default="true" id="598bc97f-dc8f-4c55-82cf-76276baaebee" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -63,11 +56,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Port.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Port.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Port.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+            <state relative-caret-position="196">
+              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Category.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Category.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding>
+                <element signature="n#!!block;n#Text#0;n#!!block;n#Category#0" />
+                <element signature="n#!!block;n#Choice#0;n#!!block;n#Category#0" />
+                <element signature="n#!!block;n#Executable#0;n#!!block;n#Category#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -319,7 +326,7 @@
         <entry key="$USER_HOME$/.gradle/gradle.properties" value="2769755499" />
         <entry key="$PROJECT_DIR$" value="7622312468000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="2578537234" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="4228492451" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="975608090" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="3485864340" />
       </map>
@@ -470,9 +477,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="x" value="150" />
+    <option name="y" value="184" />
+    <option name="width" value="1280" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -480,7 +488,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -524,6 +531,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -730,7 +738,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="150" y="184" width="1280" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="GfmBrowser" order="3" />
@@ -739,13 +747,13 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.43194443" side_tool="true" weight="0.2864259" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.56805557" visible="true" weight="0.28518057" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.56805557" weight="0.28518057" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4826389" weight="0.23850931" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="right" id="Flutter Outline" order="9" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2048611" />
-      <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.24027778" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2046875" />
+      <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.23984376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -800,13 +808,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="before pull" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Port.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="63" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -970,8 +971,20 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Challenges.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Port.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+        <state relative-caret-position="196">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Category.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!block;n#Text#0;n#!!block;n#Category#0" />
+            <element signature="n#!!block;n#Choice#0;n#!!block;n#Category#0" />
+            <element signature="n#!!block;n#Executable#0;n#!!block;n#Category#0" />
+          </folding>
         </state>
       </provider>
     </entry>
