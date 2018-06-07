@@ -29,5 +29,6 @@ Write the password
 ## REST
 
 * `/challenge` to get summaries for all challenges
-* `/challenge/7` to get details for challenge #7
+1. `/challenge/7` to get details for challenge #7
 * `/challenge/Java` to get summaries for all challenges tagged `Java`
+1. Testin items
