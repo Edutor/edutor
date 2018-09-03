@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d150c41d-064f-4736-b12b-b9cd1675b408" name="Default" comment="Before pull" />
+    <list default="true" id="d150c41d-064f-4736-b12b-b9cd1675b408" name="Default" comment="Before pull">
+      <change afterPath="$PROJECT_DIR$/../edutool/src/main/kotlin/dk/edutor/util/Path.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../edutool/src/test/kotlin/dk/edutor/edutool/markdown/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../edutool/src/test/kotlin/dk/edutor/edutool/markdown/ParserTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Edutor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Edutor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eduport-multiple-choice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eduport-multiple-choice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eduport/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eduport/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edutool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../edutool/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edutool/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../edutool/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edutool/src/main/kotlin/dk/edutor/edutool/markdown/Parser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../edutool/src/main/kotlin/dk/edutor/edutool/markdown/Parser.kt" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -63,7 +74,7 @@
       <file leaf-file-name="Quests.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/core/model/db/Quests.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
+            <state relative-caret-position="585">
               <caret line="42" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#33#195#0" expanded="true" />
@@ -75,7 +86,7 @@
       <file leaf-file-name="QuestRoutes.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/core/routes/QuestRoutes.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-161">
+            <state relative-caret-position="210">
               <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
               <folding>
                 <element signature="e#31#345#0" expanded="true" />
@@ -87,11 +98,8 @@
       <file leaf-file-name="Edutor.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Edutor.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="27" column="88" lean-forward="true" selection-start-line="27" selection-start-column="88" selection-end-line="27" selection-end-column="88" />
-              <folding>
-                <element signature="e#1718#2760#2" />
-              </folding>
+            <state relative-caret-position="416">
+              <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -498,8 +506,8 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/dk/edutor/core/model/db/MySqlManager.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/dk/edutor/core/model/db/Tags.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/dk/edutor/core/routes/QuestRoutes.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/Edutor.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/dk/edutor/core/model/Main.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Edutor.kt" />
       </list>
     </option>
   </component>
@@ -508,11 +516,11 @@
       <facet id="educore/invalid/JPA" />
     </ignored-facets>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="99" />
-    <option name="y" value="88" />
-    <option name="width" value="1541" />
-    <option name="height" value="920" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="196" />
+    <option name="y" value="23" />
+    <option name="width" value="1487" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -520,36 +528,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="educore" type="cbb8eebc:String" user="educore" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="educore" type="cbb8eebc:String" user="educore" />
-              <item name="Edutor-educore_main" type="cbb8eebc:String" user="Edutor-educore_main" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="educore" type="cbb8eebc:String" user="educore" />
-              <item name="Edutor-educore_test" type="cbb8eebc:String" user="Edutor-educore_test" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="educore" type="cbb8eebc:String" user="educore" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="educore" type="cbb8eebc:String" user="educore" />
-              <item name="educore" type="cbb8eebc:String" user="educore" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -653,6 +631,36 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="educore" type="cbb8eebc:String" user="educore" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="educore" type="cbb8eebc:String" user="educore" />
+              <item name="Edutor-educore_main" type="cbb8eebc:String" user="Edutor-educore_main" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="educore" type="cbb8eebc:String" user="educore" />
+              <item name="Edutor-educore_test" type="cbb8eebc:String" user="Edutor-educore_test" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="educore" type="cbb8eebc:String" user="educore" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="educore" type="cbb8eebc:String" user="educore" />
+              <item name="educore" type="cbb8eebc:String" user="educore" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -919,7 +927,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="99" y="88" width="1541" height="920" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="GfmBrowser" order="4" />
@@ -928,13 +936,13 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.49765626" side_tool="true" weight="0.3275218" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8234375" weight="0.21917808" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8234375" weight="0.21816038" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32670808" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49722221" weight="0.37484434" />
       <window_info anchor="right" id="Flutter Outline" order="0" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20960416" />
-      <window_info anchor="right" id="Gradle" order="8" sideWeight="0.49800798" visible="true" weight="0.105126545" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22421876" />
+      <window_info anchor="right" id="Gradle" order="8" sideWeight="0.49800798" visible="true" weight="0.1125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -1224,7 +1232,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/core/model/db/Quests.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
+        <state relative-caret-position="585">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#33#195#0" expanded="true" />
@@ -1234,7 +1242,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/core/routes/QuestRoutes.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-161">
+        <state relative-caret-position="210">
           <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding>
             <element signature="e#31#345#0" expanded="true" />
@@ -1244,11 +1252,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Edutor.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="27" column="88" lean-forward="true" selection-start-line="27" selection-start-column="88" selection-end-line="27" selection-end-column="88" />
-          <folding>
-            <element signature="e#1718#2760#2" />
-          </folding>
+        <state relative-caret-position="416">
+          <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
         </state>
       </provider>
     </entry>

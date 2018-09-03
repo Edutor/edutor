@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="598bc97f-dc8f-4c55-82cf-76276baaebee" name="Default" comment="" />
+    <list default="true" id="598bc97f-dc8f-4c55-82cf-76276baaebee" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../edutool/src/main/kotlin/dk/edutor/util/Path.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../edutool/src/test/kotlin/dk/edutor/edutool/markdown/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../edutool/src/test/kotlin/dk/edutor/edutool/markdown/ParserTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../educore/src/main/kotlin/Edutor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../educore/src/main/kotlin/Edutor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eduport-multiple-choice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eduport-multiple-choice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edutool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../edutool/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edutool/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../edutool/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edutool/src/main/kotlin/dk/edutor/edutool/markdown/Parser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../edutool/src/main/kotlin/dk/edutor/edutool/markdown/Parser.kt" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -59,7 +70,7 @@
       <file leaf-file-name="Port.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Port.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
+            <state relative-caret-position="360">
               <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
             </state>
           </provider>
@@ -476,11 +487,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="150" />
-    <option name="y" value="184" />
-    <option name="width" value="1280" />
-    <option name="height" value="777" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="196" />
+    <option name="y" value="23" />
+    <option name="width" value="1487" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -488,6 +499,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -531,8 +544,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -738,7 +749,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="150" y="184" width="1280" height="777" extended-state="0" />
+    <frame x="0" y="29" width="1280" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="GfmBrowser" order="3" />
@@ -747,8 +758,8 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.43194443" side_tool="true" weight="0.2864259" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.56805557" weight="0.28518057" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4826389" weight="0.23850931" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.56805557" weight="0.28518057" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="right" id="Flutter Outline" order="9" />
       <window_info id="Designer" order="2" />
@@ -757,8 +768,8 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Flutter Inspector" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -971,7 +982,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Challenges.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/dk/edutor/eduport/Port.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="360">
           <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
         </state>
       </provider>
