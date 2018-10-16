@@ -3,8 +3,9 @@
 ### Start the server
 1. start the vagrant virtual server to have the mysql server running (see guide below)
 2. Open educore project and run the file: src/main/kotlin/Edutor.kt
-3. In browser go to: localhost:8080/
-
+3. In browser go to: localhost:8080/run-only-once then go to localhost:8080/challenge
+  - All challenges should appear now as json.
+4. To recreate the database: change the version number in Edutor.kt `val db = MySqlManager(version = 4)`
 ## Deploying
 
 ### MySql
