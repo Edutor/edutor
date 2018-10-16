@@ -1,7 +1,7 @@
 package dk.edutor.edutool.markdown
 
 fun main(args: Array<String>) {
-  val boldRegex = Regex("""\*\*(.*)\*\*|__(.*)__|\*(.*)\*|_(.*)_|`(.*)`_""", RegexOption.CANON_EQ)
+  val boldRegex = Regex("""\*\*(.*)\*\*|__(.*)__|\*(.*)\*|_(.*)_|`(.*)`_""") //, RegexOption.CANON_EQ)
   val text =  "dette er **fed `skrift` med noget *kursiv (__fedt__ nok)* i**, såmænd og __lidt__ mere"
   val text2 = "dette er __fed `skrift` med noget *kursiv (__fedt__ nok)* i__, såmænd"
   val match = boldRegex.find(text2)

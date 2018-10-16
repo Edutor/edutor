@@ -17,6 +17,23 @@ import java.io.File
 import java.net.URLDecoder
 
 fun Routing.quest() {
+
+    get("/quest/{id}") {
+        val id = (call.parameters["id"] ?: "7").toIntOrNull() ?: 7
+        val doc = MdSection( MdText("Overordnede spørgsmål"),
+          MdText("Svar på så mange af nedenstaående spørgsmål som muligt, bla bla bla"),
+          MdQuery("#1"),
+          MdQuery("#2"),
+          MdSection( MdText("Hvis du har tid:"),
+            MdQuery("#3"),
+            MdChoice("!#3",
+               MdQuery("#4")
+               )
+            )
+          )
+        call.respond(doc)
+        }
+
     get("/challenge") {
         call.respond(CHALLENGES.map { it.toSummary() })
         }

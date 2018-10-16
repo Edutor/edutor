@@ -29,7 +29,7 @@ val JarChecker = JarChecker()
 val WebChecker = WebChecker()
 
 val ports = mapOf(entry(SimpleChecker), entry(MultipleChoiceChecker), entry(JarChecker), entry(WebChecker))
-val db = MySqlManager(version = 3)
+val db = MySqlManager(version = 4)
 
 // data class UserSession(val user: String)
 
@@ -56,7 +56,9 @@ fun main(args: Array<String>) {
 
         routing {
             get("/hello") {
-/* /
+                call.respond(ports.values.map { it.sayHello("Edutor") })
+                }
+            get("/run-only-once") {
                 Text.Challenge(0, SimpleChecker, "First challenge", "Who is first?", "me")
                   .persist()
                   .tags = listOf(Tag("Java"), Tag("Narcissism"))
@@ -77,8 +79,7 @@ fun main(args: Array<String>) {
                     )
                   .persist()
                   .tags = listOf(Tag("Java"), Tag("IoT"), Tag("3D"))
-/ */
-                call.respond(ports.values.map { it.sayHello("Edutor") })
+                call.respond("Test data created - do not run again!")
                 }
 
             quest()
