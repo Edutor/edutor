@@ -34,6 +34,29 @@ fun Routing.quest() {
         call.respond(doc)
         }
 
+    get("/query/{query}") {
+        val query = call.parameters["query"]
+        if (query == null) call.respond(HttpStatusCode.BadRequest, "Missing query")
+        else {
+            val id = query.toIntOrNull()
+            if (id == null) call.respond(HttpStatusCode.NotImplemented, "only ids allowed so far")
+            else {
+                val challenge = CHALLENGES[id]
+                if (challenge == null) call.respond(HttpStatusCode.NotFound, "No such challenge #${id}")
+                else call.respond(challenge.toDetail())
+                }
+            }
+        }
+
+    get("/choice/{test}") {
+        val test = call.parameters["test"] ?: "false"
+        when (test) {
+            "false" -> call.respond(false)
+            "true" -> call.respond(true)
+            else -> call.respond(HttpStatusCode.NotImplemented, "only 'true' and 'false' implemented so far")
+            }
+        }
+
     get("/challenge") {
         call.respond(CHALLENGES.map { it.toSummary() })
         }
@@ -46,13 +69,14 @@ fun Routing.quest() {
             if (id == null) {
                 val tag = Tag(URLDecoder.decode(tagOrId, "UTF-8"))
                 call.respond(CHALLENGES_HAVE_TAGS[tag].map { it.toSummary() })
-            } else {
+                }
+            else {
                 val challenge = CHALLENGES[id]
                 if (challenge == null) call.respond(HttpStatusCode.NotFound, "No such challenge #${id}")
                 else call.respond(challenge.toDetail())
+                }
             }
         }
-    }
 
     post("/evaluate/{dtype}") {
         val dtype = call.parameters["dtype"]!!

@@ -37,3 +37,10 @@ Write the password
 * `/challenge` to get summaries for all challenges
 * `/challenge/7` to get details for challenge #7
 * `/challenge/Java` to get summaries for all challenges tagged `Java`
+
+* `/quest/1` to get quest #1
+
+* `/query/4` to get details for challenge #7
+
+* `/choice/true` to get the answer `true`
+* `/choice/false` to get the answer `false`
