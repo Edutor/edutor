@@ -56,7 +56,7 @@ fun main(args: Array<String>) {
 
         routing {
             get("/hello") {
-/* /
+/* */
                 Text.Challenge(0, SimpleChecker, "First challenge", "Who is first?", "me")
                   .persist()
                   .tags = listOf(Tag("Java"), Tag("Narcissism"))
@@ -77,7 +77,7 @@ fun main(args: Array<String>) {
                     )
                   .persist()
                   .tags = listOf(Tag("Java"), Tag("IoT"), Tag("3D"))
-/ */
+/* */
                 call.respond(ports.values.map { it.sayHello("Edutor") })
                 }
 
