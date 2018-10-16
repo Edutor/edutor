@@ -38,7 +38,7 @@ exposed.properties
 cmake-build-debug/
 
 # Mongo Explorer plugin:
-**/.idea/**/mongoSettings.xml
+**.idea/**/mongoSettings.xml
 
 ## File-based project format:
 *.iws
@@ -195,3 +195,6 @@ gradle-app.setting
 
 
 # End of https://www.gitignore.io/api/java,macos,linux,gradle,kotlin,windows,intellij
+
+# Miscellaneous
+old-*
