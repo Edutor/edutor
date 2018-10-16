@@ -8,7 +8,7 @@ object USERS : Table(), Iterable<User> {
   val id = integer("id").autoIncrement().primaryKey()
   val code = varchar("code", 16).uniqueIndex()
   val name = text("name")
-
+  //                                                                       .map(it -> user(it))
   override fun iterator(): Iterator<User> = transaction { USERS.selectAll().map(::user).iterator() }
 
   operator fun get(id: Int?): User? = transaction {
@@ -26,12 +26,13 @@ object USERS : Table(), Iterable<User> {
       val userId = USERS.insert { row ->
         row[code] = user.code
         row[name] = user.name
+        // }.get(USERS.id)  because get function is defined as infix:
         } get USERS.id
       if (userId == null) throw RuntimeException("Error inserting User")
       user.copy(id = userId)
       }
     else return transaction {
-      USERS.update({ USERS.id eq user.id}) { row ->
+      USERS.update({ USERS.id eq user.id }) { row ->
         row[code] = user.code
         row[name] = user.name
         }

@@ -19,7 +19,7 @@ import java.net.URLDecoder
 fun Routing.quest() {
     get("/challenge") {
         call.respond(CHALLENGES.map { it.toSummary() })
-    }
+        }
 
     get("/challenge/{query}") {
         val tagOrId: String? = call.parameters["query"]

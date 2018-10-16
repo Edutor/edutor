@@ -41,6 +41,7 @@ abstract class Solution(
 
 open class Assessment(val explanation: String, val grade: Double)
 
+// Virtuel collection of challenges base on markdown in template
 data class Quest(val id: Int, val title: String, val template: String)
 
 data class Tag(val code: String)
