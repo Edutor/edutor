@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/Could not find dk.edutor:eduport-simple:0.10.0." />
       <root url="jar://$MAVEN_REPOSITORY$/dk/edutor/eduport-simple/0.10.0/eduport-simple-0.10.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/dk.edutor/eduport-simple/0.10.0/224f40bf9c9874f9627402dd1e721a183d9ed8cc/eduport-simple-0.10.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

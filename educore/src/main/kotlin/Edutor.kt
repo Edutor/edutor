@@ -56,9 +56,13 @@ fun main(args: Array<String>) {
 
         routing {
             get("/hello") {
+<<<<<<< HEAD
                 call.respond(ports.values.map { it.sayHello("Edutor") })
                 }
             get("/run-only-once") {
+=======
+/* */
+>>>>>>> 8945b6e03d0582e2f6f44ab63564ad15cb059959
                 Text.Challenge(0, SimpleChecker, "First challenge", "Who is first?", "me")
                   .persist()
                   .tags = listOf(Tag("Java"), Tag("Narcissism"))
@@ -79,7 +83,12 @@ fun main(args: Array<String>) {
                     )
                   .persist()
                   .tags = listOf(Tag("Java"), Tag("IoT"), Tag("3D"))
+<<<<<<< HEAD
                 call.respond("Test data created - do not run again!")
+=======
+/* */
+                call.respond(ports.values.map { it.sayHello("Edutor") })
+>>>>>>> 8945b6e03d0582e2f6f44ab63564ad15cb059959
                 }
 
             quest()
