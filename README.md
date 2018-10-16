@@ -1,5 +1,10 @@
 # Edutor Core Application Server
 
+### Start the server
+1. start the vagrant virtual server to have the mysql server running (see guide below)
+2. Open educore project and run the file: src/main/kotlin/Edutor.kt
+3. In browser go to: localhost:8080/
+
 ## Deploying
 
 ### MySql
