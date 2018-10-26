@@ -18,8 +18,6 @@ import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import io.ktor.sessions.*
-import java.nio.file.Files
-import java.nio.file.Paths
 import java.text.DateFormat
 
 fun entry(port: Port) = port.key to port

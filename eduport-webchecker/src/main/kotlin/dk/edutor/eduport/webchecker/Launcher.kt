@@ -9,7 +9,6 @@ import org.junit.platform.launcher.TestExecutionListener
 import org.junit.platform.launcher.TestIdentifier
 import org.junit.platform.launcher.TestPlan
 import org.junit.platform.launcher.listeners.SummaryGeneratingListener
-import java.io.File
 
 class Launcher {
     var successfulPercentage : Double = 0.0;

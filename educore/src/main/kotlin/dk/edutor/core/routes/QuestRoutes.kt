@@ -21,6 +21,14 @@ fun Routing.quest() {
         call.respond(CHALLENGES.map { it.toSummary() })
     }
 
+    get("/urlchallenges/{type}") {
+        val type: String? = call.parameters["type"]
+        if (type != null)
+        {
+            call.respond(URL_CHALLENGES[type].map { it.toDetail() })
+        }
+    }
+
     get("/challenge/{query}") {
         val tagOrId: String? = call.parameters["query"]
         if (tagOrId == null) call.respond(CHALLENGES.map { it.toSummary() })

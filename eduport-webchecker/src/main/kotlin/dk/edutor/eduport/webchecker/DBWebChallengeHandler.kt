@@ -18,7 +18,7 @@ class DBWebChallengeHandler {
         preparedStatement.setString(1, name)
         preparedStatement.setString(2, type)
         preparedStatement.setString(3, file.name)
-        preparedStatement.setBinaryStream(4, fileStream, file.length() as Long)
+        preparedStatement.setBinaryStream(4, fileStream, file.length())
         preparedStatement.executeUpdate()
         dbconnector.close()
     }

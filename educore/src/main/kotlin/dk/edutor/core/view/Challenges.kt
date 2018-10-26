@@ -122,8 +122,8 @@ fun Challenge.toDetail() =
                     this.question,
                     this.name,
                     this.type,
-                    //this.fileName
-                    this.fileClass.contentToString()
+                    this.fileName
+                    //this.fileClass.contentToString()
             )
             else -> throw RuntimeException("challenge type not defined")
         }

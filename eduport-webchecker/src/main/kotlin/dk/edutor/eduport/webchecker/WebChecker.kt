@@ -83,7 +83,7 @@ class WebChecker : Port {
         }
 
         val score : Double = launcher.successfulPercentage
-        var explanation = ""
+        var explanation : String
 
         if (score <= 0.0) explanation = "Not good"
         else if (score < 100.0) explanation = "Some right things here"
