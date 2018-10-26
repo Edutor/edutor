@@ -55,6 +55,10 @@ fun main(args: Array<String>) {
             }
 
         routing {
+            get("/hi") {
+                val url = environment.config.propertyOrNull("exposed.url")?.getString() ?: "none"
+                call.respond(url)
+                }
             get("/hello") {
                 call.respond(ports.values.map { it.sayHello("Edutor") })
                 }
