@@ -27,7 +27,9 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output-test url="file://$MODULE_DIR$/../../edutool/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../edutool/src/test" />
+    <content url="file://$MODULE_DIR$/../../edutool/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../edutool/src/test/kotlin" isTestSource="true" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="edutool_main" />
