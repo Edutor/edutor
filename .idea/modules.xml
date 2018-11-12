@@ -3,27 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/educore.iml" filepath="$PROJECT_DIR$/.idea/modules/educore.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/educore_main.iml" filepath="$PROJECT_DIR$/.idea/modules/educore_main.iml" group="educore" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/educore_test.iml" filepath="$PROJECT_DIR$/.idea/modules/educore_test.iml" group="educore" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-jar.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-jar.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-jar_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-jar_main.iml" group="eduport-jar" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-jar_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-jar_test.iml" group="eduport-jar" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-multiple-choice.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-multiple-choice.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-multiple-choice_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-multiple-choice_main.iml" group="eduport-multiple-choice" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-multiple-choice_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-multiple-choice_test.iml" group="eduport-multiple-choice" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-simple.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-simple.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-simple_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-simple_main.iml" group="eduport-simple" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-simple_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-simple_test.iml" group="eduport-simple" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-webchecker.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-webchecker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-webchecker_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-webchecker_main.iml" group="eduport-webchecker" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport-webchecker_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport-webchecker_test.iml" group="eduport-webchecker" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport_main.iml" group="eduport" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eduport_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eduport_test.iml" group="eduport" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/edutool.iml" filepath="$PROJECT_DIR$/.idea/modules/edutool.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/edutool_main.iml" filepath="$PROJECT_DIR$/.idea/modules/edutool_main.iml" group="edutool" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/edutool_test.iml" filepath="$PROJECT_DIR$/.idea/modules/edutool_test.iml" group="edutool" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/edutor.iml" filepath="$PROJECT_DIR$/.idea/edutor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/edutor.iml" filepath="$PROJECT_DIR$/edutor.iml" />
     </modules>
   </component>
 </project>
