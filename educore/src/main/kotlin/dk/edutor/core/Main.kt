@@ -8,6 +8,9 @@ import io.ktor.routing.routing
 
 val host = io.ktor.server.netty.DevelopmentEngine
 
+/*
+ Main entry for application
+ */
 fun Application.edutor() {
   routing {
     get("/hi") {
