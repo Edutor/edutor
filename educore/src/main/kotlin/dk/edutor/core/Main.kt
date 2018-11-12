@@ -10,7 +10,7 @@ val host = io.ktor.server.netty.DevelopmentEngine
 
 /*
  Main entry for application.
- Testing Webhooks and more
+ Testing Webhooks and more yet
  */
 fun Application.edutor() {
   routing {
