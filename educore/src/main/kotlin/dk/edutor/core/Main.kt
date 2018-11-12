@@ -9,7 +9,8 @@ import io.ktor.routing.routing
 val host = io.ktor.server.netty.DevelopmentEngine
 
 /*
- Main entry for application.
+  Main entry for application.
+  TODO: Use Application approach
   */
 fun Application.edutor() {
   routing {
