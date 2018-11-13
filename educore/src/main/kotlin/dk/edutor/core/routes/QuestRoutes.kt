@@ -132,6 +132,14 @@ fun Routing.quest() {
         call.respond(fileContent)
     }
 
+    get("/urlchallenges/{type}") {
+        val type: String? = call.parameters["type"]
+        if (type != null)
+        {
+            call.respond(URL_CHALLENGES[type].map { it.toDetail() })
+        }
+    }
+
     post("/webchecker/upload") {
         val multipart = call.receiveMultipart()
         val parts = mutableMapOf<String, String>()
