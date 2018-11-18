@@ -44,3 +44,39 @@ Write the password
 
 * `/choice/true` to get the answer `true`
 * `/choice/false` to get the answer `false`
+
+### Examples
+```
+http://localhost:8080/challenge/3
+---------------------------------
+{
+    "description": "Third challenge",
+    "question": "Who is not IT-Seminar university",
+    "answers": [
+        "Haaga-Helia",
+        "ITU",
+        "Hesso-Valais",
+        "UE"
+    ],
+    "portKey": "MULTIPLE_CHOICE",
+    "template": "checkbox",
+    "id": 3,
+    "dtype": "CHOICE"
+}
+```
+
+
+```
+http://localhost:8080/evaluate/CHOICE
+-------------------------------------
+{
+    "challenge": { "id" : 3 },
+    "answers" : [0,1]
+}
+-------------------------------------
+{
+    "explanation": "Some right things here",
+    "grade": 60
+}
+```
+
