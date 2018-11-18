@@ -46,6 +46,10 @@ object URL_CHALLENGES : Table() {
     val type = text("type")
     val fileName = text("fileName")
     val fileClass = blob("fileClass")
+
+    operator fun get(type: String) : List<Challenge> = transaction {
+        CHALLENGES_JOINED.select { URL_CHALLENGES.type eq type }.map(::challenge)
+    }
 }
 
 val CHALLENGES_JOINED =

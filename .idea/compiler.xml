@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="educore-exp_main" target="1.8" />
+      <module name="educore-exp_test" target="1.8" />
       <module name="educore_main" target="1.8" />
       <module name="educore_test" target="1.8" />
       <module name="eduport-jar_main" target="1.8" />
