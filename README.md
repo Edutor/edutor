@@ -35,12 +35,12 @@ Write the password
 ## REST
 
 * `/challenge` to get summaries for all challenges
-* `/challenge/7` to get details for challenge #7
+* `/challenge/1` to get details for challenge #1
 * `/challenge/Java` to get summaries for all challenges tagged `Java`
 
-* `/quest/1` to get quest #1
+* `/quest/7` to get quest #7
 
-* `/query/4` to get details for challenge #7
+* `/query/4` to get details for challenge #4
 
 * `/choice/true` to get the answer `true`
 * `/choice/false` to get the answer `false`
