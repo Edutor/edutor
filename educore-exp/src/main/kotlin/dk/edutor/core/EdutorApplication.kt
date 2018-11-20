@@ -16,7 +16,6 @@ import io.ktor.routing.*
 //import io.ktor.
 import java.text.DateFormat
 
-
 fun Application.main() {
   val jwtIssuer = environment.config.property("jwt.issuer").getString()
   val jwtAudience = environment.config.property("jwt.audience").getString()
