@@ -59,6 +59,7 @@ fun main(args: Array<String>) {
                 val url = environment.config.propertyOrNull("exposed.url")?.getString() ?: "none"
                 call.respond(url)
                 }
+//          endpoint til at teste om serveren er opppe
             get("/hello") {
                 call.respond(ports.values.map { it.sayHello("Edutor") })
                 }
