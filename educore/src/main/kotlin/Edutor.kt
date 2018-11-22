@@ -50,7 +50,7 @@ fun main(args: Array<String>) {
                 setPrettyPrinting()
                 }
             }
-        install(Sessions) {
+        install(Sessions)    {
             cookie<User>("SESSION", storage = SessionStorageMemory())
             }
 

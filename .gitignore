@@ -1,6 +1,6 @@
 ### MySQL configurations ###
 persistence.xml
-exposed.properties
+#exposed.properties
 
 ### Vagrant ###
 .vagrant/

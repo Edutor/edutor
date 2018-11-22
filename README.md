@@ -91,11 +91,12 @@ http://localhost:8080/query/3
 
 
 ```
-http://localhost:8080/evaluate/CHOICE
+http://localhost:8080/evaluate/choice/3
 -------------------------------------
 {
-    "challenge": { "id" : 3 },
-    "answers" : [0,1]
+    "answers" : [
+        "Haaga-Helia",
+        "Hesso-Valais",]
 }
 -------------------------------------
 {
