@@ -50,9 +50,9 @@ Write the password
 http://localhost:8080/challenge/3
 ---------------------------------
 {
-    "description": "Third challenge",
+    "description": "Every year ...",
     "question": "Who is not IT-Seminar university",
-    "answers": [
+    "options": [
         "Haaga-Helia",
         "ITU",
         "Hesso-Valais",
@@ -65,13 +65,38 @@ http://localhost:8080/challenge/3
 }
 ```
 
+```
+http://localhost:8080/query/3
+---------------------------------
+{
+    "description": "Every year ...",
+    "question": "Who is not IT-Seminar university",
+    "options": [
+        "Haaga-Helia",
+        "ITU",
+        "Hesso-Valais",
+        "UE"
+    ],
+    "portKey": "MULTIPLE_CHOICE",
+    "template": "checkbox",
+    "id": 3,
+    "dtype": "CHOICE"
+    "status": {
+      "answers" : [0,1],
+      "explanation": "Some right things here",
+      "grade": 60
+    }
+}
+```
+
 
 ```
-http://localhost:8080/evaluate/CHOICE
+http://localhost:8080/evaluate/choice/3
 -------------------------------------
 {
-    "challenge": { "id" : 3 },
-    "answers" : [0,1]
+    "answers" : [
+        "Haaga-Helia",
+        "Hesso-Valais",]
 }
 -------------------------------------
 {
