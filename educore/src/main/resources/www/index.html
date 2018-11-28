@@ -7,5 +7,20 @@
 <body>
   <h1>The <b>Edutor</b> platform</h1>
   <hr/>
+  <form action="/quest" method="POST" enctype="multipart/form-data">
+    <table>
+      <tr>
+        <th>Id:</th><td><input type="number" name="id" /></td>
+      </tr>
+      <tr>
+        <th>Title:</th><td><input type="text" name="title"/></td>
+      </tr>
+      <tr>
+        <th>Template:</th><td><input type="file" name="questfile" /></td>
+      </tr>
+    </table>
+    <button>submit</button>
+  </form>
+  <hr/>
 </body>
 </html>

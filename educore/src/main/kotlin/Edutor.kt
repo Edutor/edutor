@@ -84,6 +84,20 @@ fun main(args: Array<String>) {
                     )
                   .persist()
                   .tags = listOf(Tag("Java"), Tag("IoT"), Tag("3D"))
+                Choice.Challenge(
+                    0,
+                    MultipleChoiceChecker,
+                    "Fourth challenge",
+                    "Which is not a Java keyword",
+                    listOf(
+                        Option("public", -40.0),
+                        Option("private", -40.0),
+                        Option("secret", 100.0),
+                        Option("static", -40.0)
+                        )
+                    )
+                  .persist()
+                  .tags = listOf(Tag("Java"))
                 call.respond("Test data created - do not run again!")
                 }
 

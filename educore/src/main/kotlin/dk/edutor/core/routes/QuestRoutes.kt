@@ -2,6 +2,7 @@ package dk.edutor.core.routes
 
 import dk.edutor.core.model.db.*
 import dk.edutor.core.view.*
+import dk.edutor.core.view.markdown.*
 import dk.edutor.eduport.*
 import dk.edutor.eduport.Category.*
 import dk.edutor.eduport.webchecker.WebChecker
@@ -20,19 +21,43 @@ fun Routing.quest() {
 
     get("/quest/{id}") {
         val id = (call.parameters["id"] ?: "7").toIntOrNull() ?: 7
-        val doc = MdSection( MdText("Overordnede spørgsmål"),
-          MdText("Svar på så mange af nedenstaående spørgsmål som muligt, bla bla bla"),
-          MdQuery("1"),
-          MdQuery("2"),
-          MdSection( MdText("Hvis du har tid:"),
+        val doc = MdSection(MdText("Overordnede spørgsmål"), 1,
+            MdText("Svar på så mange af nedenstaående spørgsmål som muligt, bla bla bla"),
             MdQuery("3"),
-            MdChoice("!#3",
-               MdQuery("4")
-               )
+            MdQuery("4")
             )
-          )
         call.respond(doc)
         }
+
+    post("/quest") {
+      if (!call.request.isMultipart()) call.respond(HttpStatusCode.BadRequest, "Should be multipart")
+      else {
+        var id = 0
+        var title = "No title"
+        var template : String? = null
+        val multipart = call.receiveMultipart()
+        multipart.forEachPart { part ->
+          when (part) {
+            is PartData.FormItem -> {
+              when (part.name) {
+                "id" -> id = part.value.toIntOrNull() ?: 0
+                "title" -> title = part.value
+                }
+              }
+            is PartData.FileItem -> {
+              part.streamProvider().use { input ->
+                template = input.reader().readText()
+                }
+              }
+            }
+          }
+        if (template == null) call.respond(HttpStatusCode.BadRequest, "No file specified")
+        else {
+          Quest(id, title, template!!).persist()
+          call.respond("$id: $title\n$template")
+          }
+        }
+      }
 
     get("/query/{query}") {
         val query = call.parameters["query"]
