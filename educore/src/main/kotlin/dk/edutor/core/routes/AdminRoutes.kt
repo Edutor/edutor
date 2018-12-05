@@ -1,16 +1,17 @@
 package dk.edutor.core.routes
 
 import db
-import dk.edutor.core.model.db.MySqlManager
-import dk.edutor.core.model.db.USERS
+import dk.edutor.core.model.db.*
 import io.ktor.application.call
 import io.ktor.response.respond
-import io.ktor.routing.Routing
-import io.ktor.routing.get
 import ports
 import dk.edutor.eduport.User
+import io.ktor.http.HttpStatusCode
+import io.ktor.request.receive
+import io.ktor.routing.*
 import io.ktor.sessions.*
 import sonja
+import java.lang.Exception
 
 
 fun Routing.admin() {
@@ -42,6 +43,30 @@ fun Routing.admin() {
       call.respond("session was null")
       }
     else call.respond(session)
+    }
+
+  post("/user") {
+    val user = call.receive<User>()
+    try {
+      val persitedUser = user.persist()
+      call.respond(persitedUser)
+      }
+    catch (e: Exception) {
+      call.respond(HttpStatusCode.Conflict, "User exists")
+      }
+    }
+
+  post("/login/{code}") {
+    val code = call.parameters["code"]
+    if (code == null) call.respond(HttpStatusCode.BadRequest, "No user code applied")
+    else {
+      val user = USERS[code]
+      if (user == null) call.respond(HttpStatusCode.Unauthorized, "User code or password is wrong")
+      else {
+        call.sessions.set(user)
+        call.respond(user)
+        }
+      }
     }
 
   }

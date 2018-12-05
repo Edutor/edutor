@@ -13,6 +13,8 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.request.*
 import io.ktor.response.respond
 import io.ktor.routing.*
+import io.ktor.sessions.get
+import io.ktor.sessions.sessions
 import ports
 import kurt
 import java.io.File
@@ -61,8 +63,8 @@ fun Routing.quest() {
           }
         if (template == null) call.respond(HttpStatusCode.BadRequest, "No file specified")
         else {
-          Quest(id, title, template!!).persist()
-          call.respond("$id: $title\n$template")
+          val quest = Quest(id, title, template!!).persist()
+          call.respond("${quest.id}: $title\n$template")
           }
         }
       }
@@ -112,6 +114,11 @@ fun Routing.quest() {
         }
 
     post("/evaluate/{dtype}") {
+        val user = call.sessions.get<User>()
+        if (user == null) {
+          call.respond(HttpStatusCode.Unauthorized, "User must be logged in")
+          return@post
+          }
         val dtype = call.parameters["dtype"]!!
         val solutionDetail = when (dtype) {
             Category.TEXT -> call.receive<TextSolutionDetail>()
@@ -125,7 +132,7 @@ fun Routing.quest() {
 
         if (challenge == null) call.respond(HttpStatusCode.BadRequest, "No such challenge #$challengeId")
         else {
-            val solution = solutionDetail.toEntity(kurt, challenge) // TODO: use logged in person
+            val solution = solutionDetail.toEntity(user, challenge)
             val port = ports[challenge.port.key]
             if (port == null) call.respond(HttpStatusCode.BadRequest, "Unknown port #${challenge.port.key}")
             else {

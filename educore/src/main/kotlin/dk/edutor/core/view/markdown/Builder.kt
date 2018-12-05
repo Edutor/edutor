@@ -23,6 +23,7 @@ class DocumentBuilder {
     }
 
   fun append(line: Line) {
+    if (line.text.isEmpty()) return
     when (line.text[0]) {
       '#' -> {
         val level = line.text.indexOfFirst { it != '#' }
@@ -66,7 +67,7 @@ class DocumentBuilder {
               top.append(query)
               }
             else -> {
-              TODO("Implement links")
+              top.append(Text("${line.text} - unknown control sequence ${parts[0]}"))
               }
             }
           }
