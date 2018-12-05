@@ -3,6 +3,7 @@ package dk.edutor.core.routes
 import dk.edutor.core.model.db.*
 import dk.edutor.core.view.*
 import dk.edutor.core.view.markdown.*
+import dk.edutor.core.view.markdown.Text
 import dk.edutor.eduport.*
 import dk.edutor.eduport.Category.*
 import dk.edutor.eduport.webchecker.WebChecker
@@ -21,12 +22,19 @@ fun Routing.quest() {
 
     get("/quest/{id}") {
         val id = (call.parameters["id"] ?: "7").toIntOrNull() ?: 7
-        val doc = MdSection(MdText("Overordnede spørgsmål"), 1,
-            MdText("Svar på så mange af nedenstaående spørgsmål som muligt, bla bla bla"),
-            MdQuery("3"),
-            MdQuery("4")
-            )
-        call.respond(doc)
+        if (id == 7) {
+          val doc = Section(Text("Overordnede spørgsmål"), 1,
+              Text("Svar på så mange af nedenstaående spørgsmål som muligt, bla bla bla"),
+              Query("3"),
+              Query("4")
+              )
+          call.respond(doc)
+          }
+        else {
+          val quest = QUESTS[id]
+          if (quest == null) call.respond(HttpStatusCode.NotFound, "No such quest: $id")
+          else call.respond(parse(quest.template))
+          }
         }
 
     post("/quest") {

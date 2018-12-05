@@ -1,64 +1,105 @@
 package dk.edutor.core.view.markdown
 
-open abstract class MdContent {
+import com.google.gson.GsonBuilder
+
+open abstract class Content {
   abstract val type: String
-  var parent: MdSection? = null
   }
 
-class MdText(val value: String) : MdContent() {
+interface Container {
+  fun level(): Int
+  fun append(content: Content)
+  }
+
+class Text(val value: String) : Content() {
   override val type = "TEXT"
   }
 
-class MdSection(val title: MdText, val level: Int = 1, vararg children: MdContent) : MdContent() {
+class Section(
+    val title: Text,
+    val level: Int = 0,
+    vararg children: Content
+    ) : Content(), Container {
   override val type = "SECTION"
-  val contents = mutableListOf<MdContent>()
+  val contents = mutableListOf<Content>()
+
   init {
-    for (child in children) add(child)
+    contents.addAll(0, children.asList())
     }
-  fun add(content: MdContent) {
-    content.parent = this
+
+  override fun level() = level
+
+  override fun append(content: Content) {
     contents.add(content)
     }
   }
 
-class MdQuery(val query: String) : MdContent() {
+class Document(vararg children: Content) : Container {
+  val contents = mutableListOf<Content>()
+
+  init {
+    contents.addAll(0, children.asList())
+    }
+
+  override fun level() = 0
+
+  override fun append(content: Content) {
+    contents.add(content)
+    }
+
+  }
+
+class Query(val query: String) : Content() {
   override val type = "QUERY"
   }
 
 
-class MdChoice(val test: String, vararg var contents: MdContent) : MdContent() {
+class Choice(val test: String, vararg var contents: Content) : Content() {
   override val type = "CHOICE"
   }
 
-data class Line(val indent: Int, val text: String) {
-  val isEmpty: Boolean
-    get() = indent == 0 && text.isEmpty()
-  val isNewContent: Boolean
-    get() = text.startsWith('#') && indent == 0 || text.startsWith("{") || isEmpty
+class ItemList(@Transient val level: Int) : Content(), Container {
+  override val type = "LIST"
+  val contents = mutableListOf<Content>()
+
+  override fun level() = level
+
+  override fun append(content: Content) {
+    contents.add(content)
+    }
+
   }
 
+fun main(args: Array<String>) {
+  val template = """
+  # Headline one
+  Some text on two lines
+  this is the second line
 
-fun parse(template: String): MdSection {
-  val rawLines = template.lines().map { Line(it.indexOfFirst { c -> c != ' ' && c != '\t'}, it.trim())}
-  val lines = mutableListOf<Line>()
-  var line = Line(0, "")
-  for (rawLine in rawLines) {
-    if (line.isEmpty) {
-      line = rawLine
-      continue
-      }
-    if (rawLine.isNewContent) {
-      lines.add(line)
-      line = rawLine
-      continue
-      }
-    line = line.copy(text = "${line.text} ${rawLine.text}")
-    }
-  var section = MdSection(MdText("Root"), 0)
-  for (line in lines) {
+  !QUERY 3
 
-    }
+     Another afsnit
+  også på to linier
 
+   * First
+   * Second
+     - and a half
+     - and two thirds
+   * Third
 
-  return MdSection(MdText("Document"), 1)
+  # Headline two
+  Here is another list:
+  + en
+  + to
+  + tre
+  ### And three
+  """.trimIndent()
+
+  val builder = DocumentBuilder()
+  val lines = builder.parse(template)
+  lines.forEach { builder.append(it) }
+  val document = builder.document
+  val gson = GsonBuilder().setPrettyPrinting().create()
+
+  println(gson.toJson(document.contents))
   }
