@@ -83,6 +83,10 @@ fun Routing.quest() {
             }
         }
 
+    get("/solution") {
+        call.respond(SOLUTIONS.map { it.toDetail() })
+        }
+
     get("/choice/{test}") {
         val test = call.parameters["test"] ?: "false"
         when (test) {

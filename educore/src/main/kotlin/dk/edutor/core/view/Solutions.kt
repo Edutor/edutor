@@ -42,3 +42,21 @@ fun SolutionDetail.toEntity(solver: User, challenge: Challenge) =
             is UrlSolutionDetail -> Url.Solution(this.id, solver, challenge as Url.Challenge, this.url)
             else -> throw RuntimeException("Unknown solution type")
         }
+
+fun Solution.toIdentifier() = SolutionIdentifier(this.id)
+
+fun Solution.toDetail() =
+    when (this) {
+      is Text.Solution -> TextSolutionDetail(
+          this.id,
+          this.challenge.toIdentifier(),
+          this.answer
+      )
+      is Choice.Solution -> ChoiceSolutionDetail(
+          this.id,
+          this.challenge.toIdentifier(),
+          this.answers
+          )
+      else -> TODO("Implement Executable and URL solutions")
+      }
+

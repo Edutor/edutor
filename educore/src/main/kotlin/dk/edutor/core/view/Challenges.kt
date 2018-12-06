@@ -85,6 +85,8 @@ class UrlChallengeAdminDetail(
         var fileName: String
 ) : ChallengeAdminDetail(id, Choice().dtype, portKey)
 
+fun Challenge.toIdentifier() = ChallengeIdentifier(this.id, this.category.dtype)
+
 fun Challenge.toSummary() =
         ChallengeSummary(
                 this.id,
