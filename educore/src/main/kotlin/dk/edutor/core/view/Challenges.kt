@@ -3,6 +3,7 @@ package dk.edutor.core.view
 import dk.edutor.eduport.*
 import dk.edutor.eduport.Category.*
 
+//open class ChallengeIdentifier(val id: Int, val dtype: String)
 open class ChallengeIdentifier(val id: Int, val dtype: String)
 
 class ChallengeSummary(

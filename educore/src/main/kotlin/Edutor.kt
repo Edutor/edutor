@@ -12,6 +12,7 @@ import io.ktor.application.install
 import io.ktor.content.*
 import io.ktor.features.*
 import io.ktor.gson.gson
+import io.ktor.http.content.*
 import io.ktor.response.respond
 import io.ktor.routing.get
 import io.ktor.routing.routing
@@ -55,10 +56,10 @@ fun main(args: Array<String>) {
             }
 
         routing {
-            get("/hi") {
-                val url = environment.config.propertyOrNull("exposed.url")?.getString() ?: "none"
-                call.respond(url)
-                }
+//            get("/hi") {
+//                val url = environment.config.propertyOrNull("exposed.url")?.getString() ?: "none"
+//                call.respond(url)
+//                }
 //          endpoint til at teste om serveren er opppe
             get("/hello") {
                 call.respond(ports.values.map { it.sayHello("Edutor") })

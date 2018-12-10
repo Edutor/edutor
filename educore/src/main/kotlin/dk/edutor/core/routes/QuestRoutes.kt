@@ -3,20 +3,18 @@ package dk.edutor.core.routes
 import dk.edutor.core.model.db.*
 import dk.edutor.core.view.*
 import dk.edutor.core.view.markdown.*
-import dk.edutor.core.view.markdown.Text
 import dk.edutor.eduport.*
-import dk.edutor.eduport.Category.*
+import dk.edutor.eduport.Category.Url
 import dk.edutor.eduport.webchecker.WebChecker
 import io.ktor.application.call
-import io.ktor.content.*
 import io.ktor.http.HttpStatusCode
+import io.ktor.http.content.*
 import io.ktor.request.*
 import io.ktor.response.respond
 import io.ktor.routing.*
 import io.ktor.sessions.get
 import io.ktor.sessions.sessions
 import ports
-import kurt
 import java.io.File
 import java.net.URLDecoder
 
@@ -70,6 +68,11 @@ fun Routing.quest() {
       }
 
     get("/query/{query}") {
+        val user = call.sessions.get<User>()
+        if (user == null) {
+          call.respond(HttpStatusCode.Unauthorized, "User must be logged in")
+          return@get
+          }
         val query = call.parameters["query"]
         if (query == null) call.respond(HttpStatusCode.BadRequest, "Missing query")
         else {
@@ -78,7 +81,10 @@ fun Routing.quest() {
             else {
                 val challenge = CHALLENGES[id]
                 if (challenge == null) call.respond(HttpStatusCode.NotFound, "No such challenge #${id}")
-                else call.respond(challenge.toDetail())
+                else {
+                  val solution = SOLUTIONS.latestFor(id, user.id)
+                  call.respond(QuestionDetail(challenge.toDetail(), solution?.toDetail()))
+                  }
                 }
             }
         }
@@ -144,7 +150,7 @@ fun Routing.quest() {
                 result.persist()
                 val assesment = result.feedback
                 if (assesment == null) call.respond(HttpStatusCode.BadRequest, "Feedback unavailable")
-                else call.respond(assesment)
+                else call.respond(QuestionDetail(challenge.toDetail(), solution.toDetail()))
                 // else call.respond(result)
             }
         }
