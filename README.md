@@ -235,3 +235,70 @@ GET /quest/6
     ]
 }
 ```
+
+Get the first (3) challenge:
+```
+GET /query/3
+```
+
+```json
+{
+    "challenge": {
+        "description": "Third challenge",
+        "question": "Who is not IT-Seminar university",
+        "answers": [
+            "Haaga-Helia",
+            "ITU",
+            "Hesso-Valais",
+            "UE"
+        ],
+        "portKey": "MULTIPLE_CHOICE",
+        "template": "checkbox",
+        "id": 3,
+        "dtype": "CHOICE"
+    }
+}
+```
+
+Answer challenge 3 incorrectly:
+```
+POST /evaluate/CHOICE
+{ "challenge": { "id": 3, "dtype" : "CHOICE" }, "answers": [1,3] }
+```
+
+```
+{
+    "challenge": {
+        "description": "Third challenge",
+        "question": "Who is not IT-Seminar university",
+        "answers": [
+            "Haaga-Helia",
+            "ITU",
+            "Hesso-Valais",
+            "UE"
+        ],
+        "portKey": "MULTIPLE_CHOICE",
+        "template": "checkbox",
+        "id": 3,
+        "dtype": "CHOICE"
+    },
+    "solution": {
+        "answers": [
+            1,
+            3
+        ],
+        "challenge": {
+            "id": 3,
+            "dtype": "CHOICE"
+        },
+        "solver": {
+            "code": "chu",
+            "name": "Caroline Hundahl",
+            "id": 16
+        },
+        "grade": 60,
+        "explanation": "Some right things here",
+        "id": 0
+    }
+}
+```
