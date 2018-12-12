@@ -14,8 +14,8 @@ data class Line(val indent: Int, val text: String) {
   val endsLine = text.startsWith("#") && indent == 0
   }
 
-class DocumentBuilder {
-  val document = Document()
+class DocumentBuilder(id: Int, title: String) {
+  val document = Document(id, title)
   val stack = Stack<Container>()
 
   init {
@@ -27,7 +27,7 @@ class DocumentBuilder {
     when (line.text[0]) {
       '#' -> {
         val level = line.text.indexOfFirst { it != '#' }
-        val section = Section(Text(line.text.substring(level).trim()), level)
+        val section = Section(line.text.substring(level).trim(), level)
         while (stack.peek().level() >= level) stack.pop()
         stack.peek().append(section)
         stack.push(section)
@@ -112,8 +112,8 @@ class DocumentBuilder {
 
   }
 
-fun parse(template: String): Document {
-  val builder = DocumentBuilder()
+fun parse(id: Int, title: String, template: String): Document {
+  val builder = DocumentBuilder(id, title)
   builder.parse(template).forEach { builder.append(it) }
   return builder.document
   }

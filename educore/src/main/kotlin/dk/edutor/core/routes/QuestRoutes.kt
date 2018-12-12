@@ -21,19 +21,12 @@ import java.net.URLDecoder
 fun Routing.quest() {
 
     get("/quest/{id}") {
-        val id = (call.parameters["id"] ?: "7").toIntOrNull() ?: 7
-        if (id == 7) {
-          val doc = Section(Text("Overordnede spørgsmål"), 1,
-              Text("Svar på så mange af nedenstaående spørgsmål som muligt, bla bla bla"),
-              Query("3"),
-              Query("4")
-              )
-          call.respond(doc)
-          }
+        val id = call.parameters["id"]?.toIntOrNull()
+        if (id == null) call.respond(HttpStatusCode.BadRequest, "Id should exist and be an integer")
         else {
           val quest = QUESTS[id]
           if (quest == null) call.respond(HttpStatusCode.NotFound, "No such quest: $id")
-          else call.respond(parse(quest.template))
+          else call.respond(parse(quest.id, quest.title, quest.template))
           }
         }
 

@@ -173,9 +173,15 @@ GET /quest/6
 
 ```json
 {
+    "id": 6,
+    "type": "SECTION",
+    "title": "Example with typos",
+    "level": 0,
     "contents": [
         {
             "type": "SECTION",
+            "title": "This is an example quest",
+            "level": 1,
             "contents": [
                 {
                     "type": "TEXT",
@@ -183,6 +189,8 @@ GET /quest/6
                 },
                 {
                     "type": "SECTION",
+                    "title": "Sections can be in different levels",
+                    "level": 2,
                     "contents": [
                         {
                             "type": "TEXT",
@@ -200,22 +208,14 @@ GET /quest/6
                             "type": "TEXT",
                             "value": "Second question uses #4"
                         }
-                    ],
-                    "title": {
-                        "type": "TEXT",
-                        "value": "Sections can be in different levels"
-                    },
-                    "level": 2
+                    ]
                 }
-            ],
-            "title": {
-                "type": "TEXT",
-                "value": "This is an example quest"
-            },
-            "level": 1
+            ]
         },
         {
             "type": "SECTION",
+            "title": "More sections in different levels apply.",
+            "level": 1,
             "contents": [
                 {
                     "type": "TEXT",
@@ -225,12 +225,7 @@ GET /quest/6
                     "type": "TEXT",
                     "value": "And a misspelled entry just creates a text"
                 }
-            ],
-            "title": {
-                "type": "TEXT",
-                "value": "More sections in different levels apply."
-            },
-            "level": 1
+            ]
         }
     ]
 }

@@ -2,7 +2,7 @@ package dk.edutor.core.view.markdown
 
 import com.google.gson.GsonBuilder
 
-open abstract class Content {
+abstract class Content {
   abstract val type: String
   }
 
@@ -15,8 +15,8 @@ class Text(val value: String) : Content() {
   override val type = "TEXT"
   }
 
-class Section(
-    val title: Text,
+open class Section(
+    val title: String,
     val level: Int = 0,
     vararg children: Content
     ) : Content(), Container {
@@ -34,20 +34,7 @@ class Section(
     }
   }
 
-class Document(vararg children: Content) : Container {
-  val contents = mutableListOf<Content>()
-
-  init {
-    contents.addAll(0, children.asList())
-    }
-
-  override fun level() = 0
-
-  override fun append(content: Content) {
-    contents.add(content)
-    }
-
-  }
+class Document(val id: Int, title: String, vararg children: Content) : Section(title, 0, *children)
 
 class Query(val query: String) : Content() {
   override val type = "QUERY"
@@ -95,7 +82,7 @@ fun main(args: Array<String>) {
   ### And three
   """.trimIndent()
 
-  val builder = DocumentBuilder()
+  val builder = DocumentBuilder(7, "Testing")
   val lines = builder.parse(template)
   lines.forEach { builder.append(it) }
   val document = builder.document
