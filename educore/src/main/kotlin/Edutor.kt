@@ -12,6 +12,7 @@ import io.ktor.application.install
 import io.ktor.content.*
 import io.ktor.features.*
 import io.ktor.gson.gson
+import io.ktor.http.content.*
 import io.ktor.response.respond
 import io.ktor.routing.get
 import io.ktor.routing.routing
@@ -55,10 +56,10 @@ fun main(args: Array<String>) {
             }
 
         routing {
-            get("/hi") {
-                val url = environment.config.propertyOrNull("exposed.url")?.getString() ?: "none"
-                call.respond(url)
-                }
+//            get("/hi") {
+//                val url = environment.config.propertyOrNull("exposed.url")?.getString() ?: "none"
+//                call.respond(url)
+//                }
 //          endpoint til at teste om serveren er opppe
             get("/hello") {
                 call.respond(ports.values.map { it.sayHello("Edutor") })
@@ -84,6 +85,20 @@ fun main(args: Array<String>) {
                     )
                   .persist()
                   .tags = listOf(Tag("Java"), Tag("IoT"), Tag("3D"))
+                Choice.Challenge(
+                    0,
+                    MultipleChoiceChecker,
+                    "Fourth challenge",
+                    "Which is not a Java keyword",
+                    listOf(
+                        Option("public", -40.0),
+                        Option("private", -40.0),
+                        Option("secret", 100.0),
+                        Option("static", -40.0)
+                        )
+                    )
+                  .persist()
+                  .tags = listOf(Tag("Java"))
                 call.respond("Test data created - do not run again!")
                 }
 

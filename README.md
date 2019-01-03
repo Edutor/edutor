@@ -105,3 +105,195 @@ http://localhost:8080/evaluate/choice/3
 }
 ```
 
+# Example flow
+
+Create user
+```
+POST /user
+{ "code": "chu", "name": "Caroline Hundahl" }
+```
+
+```
+{
+    "id": 16,
+    "code": "chu",
+    "name": "Caroline Hundahl"
+}
+```
+
+Login as `chu`
+```
+POST /login/chu
+```
+
+```
+{
+    "id": 16,
+    "code": "chu",
+    "name": "Caroline Hundahl"
+}
+```
+
+Create template
+Select in browser:
+```
+http://localhost:8080
+```
+Chose file (simple)
+
+```markdown
+6: Example with typos
+# This is an example quest
+
+This quest only uses sections tex, and quests.
+Texts can span mulitiple lines.
+QUERY (or QUESTION if you like) uses markdown preprocessor syntax.
+
+## Sections can be in different levels
+
+First question is the challenge with is #3
+
+!QUERY 3
+
+!QUESTION 4
+
+Second question uses #4
+
+# More sections in different levels apply.
+
+!QUERI 5
+
+And a misspelled entry just creates a text
+```
+
+Get Quest
+```
+GET /quest/6
+```
+
+```json
+{
+    "id": 6,
+    "type": "SECTION",
+    "title": "Example with typos",
+    "level": 0,
+    "contents": [
+        {
+            "type": "SECTION",
+            "title": "This is an example quest",
+            "level": 1,
+            "contents": [
+                {
+                    "type": "TEXT",
+                    "value": "This quest only uses sections tex, and quests. Texts can span mulitiple lines. QUERY (or QUESTION if you like) uses markdown preprocessor syntax."
+                },
+                {
+                    "type": "SECTION",
+                    "title": "Sections can be in different levels",
+                    "level": 2,
+                    "contents": [
+                        {
+                            "type": "TEXT",
+                            "value": "First question is the challenge with is #3"
+                        },
+                        {
+                            "type": "QUERY",
+                            "query": "3"
+                        },
+                        {
+                            "type": "QUERY",
+                            "query": "4"
+                        },
+                        {
+                            "type": "TEXT",
+                            "value": "Second question uses #4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "SECTION",
+            "title": "More sections in different levels apply.",
+            "level": 1,
+            "contents": [
+                {
+                    "type": "TEXT",
+                    "value": "!QUERI 5 - unknown control sequence QUERI"
+                },
+                {
+                    "type": "TEXT",
+                    "value": "And a misspelled entry just creates a text"
+                }
+            ]
+        }
+    ]
+}
+```
+
+Get the first (3) challenge:
+```
+GET /query/3
+```
+
+```json
+{
+    "challenge": {
+        "description": "Third challenge",
+        "question": "Who is not IT-Seminar university",
+        "answers": [
+            "Haaga-Helia",
+            "ITU",
+            "Hesso-Valais",
+            "UE"
+        ],
+        "portKey": "MULTIPLE_CHOICE",
+        "template": "checkbox",
+        "id": 3,
+        "dtype": "CHOICE"
+    }
+}
+```
+
+Answer challenge 3 incorrectly:
+```
+POST /evaluate/CHOICE
+{ "challenge": { "id": 3, "dtype" : "CHOICE" }, "answers": [1,3] }
+```
+
+```
+{
+    "challenge": {
+        "description": "Third challenge",
+        "question": "Who is not IT-Seminar university",
+        "answers": [
+            "Haaga-Helia",
+            "ITU",
+            "Hesso-Valais",
+            "UE"
+        ],
+        "portKey": "MULTIPLE_CHOICE",
+        "template": "checkbox",
+        "id": 3,
+        "dtype": "CHOICE"
+    },
+    "solution": {
+        "answers": [
+            1,
+            3
+        ],
+        "challenge": {
+            "id": 3,
+            "dtype": "CHOICE"
+        },
+        "solver": {
+            "code": "chu",
+            "name": "Caroline Hundahl",
+            "id": 16
+        },
+        "grade": 60,
+        "explanation": "Some right things here",
+        "id": 0
+    }
+}
+```

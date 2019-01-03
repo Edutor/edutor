@@ -45,7 +45,7 @@ fun Routing.experimental() {
                                     val jsonSol = part.value
                                     val solution: MCSolution = gson.fromJson(jsonSol, MCSolution::class.java)
                                     val result = mcChecker.check(getChallengeById(solution.id.toInt())!!, MCSolution(solution.answers, PersonIdentifier(1),solution.id))
-                                    assessmentList.add(result)
+                                    assessmentList.append(result)
                                     println("Resultatet er kommet. grade = ${result.grade}")
                                 }
 //                                is PartData.FileItem -> call.respond("File field: ${part.partName} -> ${part.originalFileName} of ${part.contentType}")
@@ -85,7 +85,7 @@ fun getChallengeSet(tags: List<String>): List<ChallengeWrapper> {
     for (c in allChallenges.values)
         if(c.tags.intersect(tags).size >= 1){
             when(c){
-                is MCChallenge -> listAll.add(c.removeSolution())
+                is MCChallenge -> listAll.append(c.removeSolution())
             }
         }
     return listAll

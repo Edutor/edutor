@@ -18,15 +18,26 @@ object SOLUTIONS : Table(), Iterable<Solution> {
     val grade = decimal("grade", 5, 2).nullable()
 
     override fun iterator() = transaction {
-        SOLUTIONS_JOINED.selectAll().map(::solution).iterator()
-    }
+      SOLUTIONS_JOINED.selectAll().map(::solution).iterator()
+      }
 
     operator fun get(id: Int?): Solution? = transaction {
-        if (id == null) null
-        else SOLUTIONS_JOINED.select { SOLUTIONS.id eq id }.map(::solution).firstOrNull()
+      if (id == null) null
+      else SOLUTIONS_JOINED.select { SOLUTIONS.id eq id }.map(::solution).firstOrNull()
+      }
+
+    fun latestFor(challengeId: Int, solverId: Int): Solution? = transaction {
+        SOLUTIONS_JOINED
+            .select {
+              (SOLUTIONS.challengeId eq challengeId) and
+              (SOLUTIONS.solverId eq solverId)
+              }
+            .orderBy(SOLUTIONS.id, false)
+            .map(::solution).firstOrNull()
+        }
+
     }
 
-}
 
 object TEXT_SOLUTIONS : Table() {
     val id = integer("id").references(SOLUTIONS.id).primaryKey()
@@ -48,12 +59,14 @@ object URL_SOLUTIONS : Table() {
     val url = text("url")
 }
 
+
+// Requires exposed v. 0.11.x to work
 val SOLUTIONS_JOINED =
-        (SOLUTIONS innerJoin USERS innerJoin CHALLENGES_JOINED) leftJoin
-                TEXT_SOLUTIONS leftJoin
-                CHOICE_SOLUTIONS leftJoin
-                EXECUTABLE_SOLUTIONS leftJoin
-                URL_SOLUTIONS
+        SOLUTIONS innerJoin USERS innerJoin CHALLENGES_JOINED leftJoin
+          TEXT_SOLUTIONS leftJoin
+          CHOICE_SOLUTIONS leftJoin
+          EXECUTABLE_SOLUTIONS leftJoin
+          URL_SOLUTIONS
 
 fun textSolution(row: ResultRow) = Text.Solution(
         row[SOLUTIONS.id],

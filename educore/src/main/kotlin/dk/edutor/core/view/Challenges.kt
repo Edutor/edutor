@@ -3,6 +3,7 @@ package dk.edutor.core.view
 import dk.edutor.eduport.*
 import dk.edutor.eduport.Category.*
 
+//open class ChallengeIdentifier(val id: Int, val dtype: String)
 open class ChallengeIdentifier(val id: Int, val dtype: String)
 
 class ChallengeSummary(
@@ -84,6 +85,8 @@ class UrlChallengeAdminDetail(
         var type: String,
         var fileName: String
 ) : ChallengeAdminDetail(id, Choice().dtype, portKey)
+
+fun Challenge.toIdentifier() = ChallengeIdentifier(this.id, this.category.dtype)
 
 fun Challenge.toSummary() =
         ChallengeSummary(

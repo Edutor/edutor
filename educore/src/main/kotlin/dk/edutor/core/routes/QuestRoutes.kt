@@ -2,39 +2,70 @@ package dk.edutor.core.routes
 
 import dk.edutor.core.model.db.*
 import dk.edutor.core.view.*
+import dk.edutor.core.view.markdown.*
 import dk.edutor.eduport.*
-import dk.edutor.eduport.Category.*
+import dk.edutor.eduport.Category.Url
 import dk.edutor.eduport.webchecker.WebChecker
 import io.ktor.application.call
-import io.ktor.content.*
 import io.ktor.http.HttpStatusCode
+import io.ktor.http.content.*
 import io.ktor.request.*
 import io.ktor.response.respond
 import io.ktor.routing.*
+import io.ktor.sessions.get
+import io.ktor.sessions.sessions
 import ports
-import kurt
 import java.io.File
 import java.net.URLDecoder
 
 fun Routing.quest() {
 
     get("/quest/{id}") {
-        val id = (call.parameters["id"] ?: "7").toIntOrNull() ?: 7
-        val doc = MdSection( MdText("Overordnede spørgsmål"),
-          MdText("Svar på så mange af nedenstaående spørgsmål som muligt, bla bla bla"),
-          MdQuery("1"),
-          MdQuery("2"),
-          MdSection( MdText("Hvis du har tid:"),
-            MdQuery("3"),
-            MdChoice("!#3",
-               MdQuery("4")
-               )
-            )
-          )
-        call.respond(doc)
+        val id = call.parameters["id"]?.toIntOrNull()
+        if (id == null) call.respond(HttpStatusCode.BadRequest, "Id should exist and be an integer")
+        else {
+          val quest = QUESTS[id]
+          if (quest == null) call.respond(HttpStatusCode.NotFound, "No such quest: $id")
+          else call.respond(parse(quest.id, quest.title, quest.template))
+          }
         }
 
+    post("/quest") {
+      if (!call.request.isMultipart()) call.respond(HttpStatusCode.BadRequest, "Should be multipart")
+      else {
+        var id = 0
+        var title = "No title"
+        var template : String? = null
+        val multipart = call.receiveMultipart()
+        multipart.forEachPart { part ->
+          when (part) {
+            is PartData.FormItem -> {
+              when (part.name) {
+                "id" -> id = part.value.toIntOrNull() ?: 0
+                "title" -> title = part.value
+                }
+              }
+            is PartData.FileItem -> {
+              part.streamProvider().use { input ->
+                template = input.reader().readText()
+                }
+              }
+            }
+          }
+        if (template == null) call.respond(HttpStatusCode.BadRequest, "No file specified")
+        else {
+          val quest = Quest(id, title, template!!).persist()
+          call.respond("${quest.id}: $title\n$template")
+          }
+        }
+      }
+
     get("/query/{query}") {
+        val user = call.sessions.get<User>()
+        if (user == null) {
+          call.respond(HttpStatusCode.Unauthorized, "User must be logged in")
+          return@get
+          }
         val query = call.parameters["query"]
         if (query == null) call.respond(HttpStatusCode.BadRequest, "Missing query")
         else {
@@ -43,9 +74,16 @@ fun Routing.quest() {
             else {
                 val challenge = CHALLENGES[id]
                 if (challenge == null) call.respond(HttpStatusCode.NotFound, "No such challenge #${id}")
-                else call.respond(challenge.toDetail())
+                else {
+                  val solution = SOLUTIONS.latestFor(id, user.id)
+                  call.respond(QuestionDetail(challenge.toDetail(), solution?.toDetail()))
+                  }
                 }
             }
+        }
+
+    get("/solution") {
+        call.respond(SOLUTIONS.map { it.toDetail() })
         }
 
     get("/choice/{test}") {
@@ -78,7 +116,13 @@ fun Routing.quest() {
             }
         }
 
-    post("/evaluate/{dtype}/{id}") {
+
+    post("/evaluate/{dtype}") {
+        val user = call.sessions.get<User>()
+        if (user == null) {
+          call.respond(HttpStatusCode.Unauthorized, "User must be logged in")
+          return@post
+          }
         val dtype = call.parameters["dtype"]!!
         val id: String = call.parameters["id"]!!
         val solutionDetail = when (dtype) {
@@ -93,7 +137,7 @@ fun Routing.quest() {
 
         if (challenge == null) call.respond(HttpStatusCode.BadRequest, "No such challenge #$challengeId")
         else {
-            val solution = solutionDetail.toEntity(kurt, challenge) // TODO: use logged in person
+            val solution = solutionDetail.toEntity(user, challenge)
             val port = ports[challenge.port.key]
             if (port == null) call.respond(HttpStatusCode.BadRequest, "Unknown port #${challenge.port.key}")
             else {
@@ -101,7 +145,7 @@ fun Routing.quest() {
                 result.persist()
                 val assesment = result.feedback
                 if (assesment == null) call.respond(HttpStatusCode.BadRequest, "Feedback unavailable")
-                else call.respond(assesment)
+                else call.respond(QuestionDetail(challenge.toDetail(), solution.toDetail()))
                 // else call.respond(result)
             }
         }
