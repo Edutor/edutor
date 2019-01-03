@@ -78,8 +78,9 @@ fun Routing.quest() {
             }
         }
 
-    post("/evaluate/{dtype}") {
+    post("/evaluate/{dtype}/{id}") {
         val dtype = call.parameters["dtype"]!!
+        val id: String = call.parameters["id"]!!
         val solutionDetail = when (dtype) {
             Category.TEXT -> call.receive<TextSolutionDetail>()
             Category.CHOICE -> call.receive<ChoiceSolutionDetail>()
