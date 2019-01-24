@@ -4,7 +4,6 @@ import dk.edutor.eduport.*
 import dk.edutor.eduport.Category.*
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
-import sun.nio.cs.UTF_32
 import javax.sql.rowset.serial.SerialBlob
 
 
