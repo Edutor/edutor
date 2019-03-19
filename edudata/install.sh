@@ -39,10 +39,4 @@ echo "**********INITIALIZING MYSQL**********"
 sudo mysql -uroot -proot -e "CREATE USER 'edutor'@'localhost' IDENTIFIED BY 'Edutor@2019'; CREATE USER 'edutor'@'%' IDENTIFIED BY 'Edutor@2019'; GRANT ALL PRIVILEGES ON *.* TO 'edutor'@'localhost' WITH GRANT OPTION; GRANT ALL PRIVILEGES ON *.* TO 'edutor'@'%' WITH GRANT OPTION; FLUSH PRIVILEGES; SET GLOBAL max_connect_errors=10000; create database edutor;"
 
 echo "**********RESTARTING MYSQL**********"
-<<<<<<< HEAD
 sudo service mysql restart
-=======
-sudo service mysql restart
-# echo "mysql -uroot -proot edutor" > start_db
-# chmod 755 start_db
->>>>>>> eae0496059893ace757b1fc9af307ae487f46aba
