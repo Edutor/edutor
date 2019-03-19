@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo apt-get update
+
 echo "**********EXPORTING DEBIAN_FRONTEND**********"
 export DEBIAN_FRONTEND="noninteractive";
 
@@ -21,7 +23,7 @@ sudo debconf-set-selections <<< 'mysql-community-server mysql-community-server/r
 sudo debconf-set-selections <<< 'mysql-community-server mysql-community-server/re-root-pass password root'
 
 echo "**********GETTING DEBCONF**********"
-wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+sudo wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
 sudo -E dpkg -i mysql-apt-config_0.8.12-1_all.deb
 #sudo rm mysql-apt-config_0.8.12-1_all.deb
 
@@ -38,5 +40,3 @@ sudo mysql -uroot -proot -e "CREATE USER 'edutor'@'localhost' IDENTIFIED BY 'Edu
 
 echo "**********RESTARTING MYSQL**********"
 sudo service mysql restart
-echo "mysql -uroot -proot edutor" > start_db
-chmod 755 start_db
