@@ -46,6 +46,7 @@ class WebChecker : Port {
     {
         var file = uploadFile
 
+        /*
         if (file.name.endsWith(".java")) {
             file = compileJavaFileToClassFile(uploadFile)
         }
@@ -53,6 +54,7 @@ class WebChecker : Port {
         if (file.name.endsWith(".kt")) {
             file = compileKotlinFileToClassFile(uploadFile)
         }
+        */
 
         if (file.name.endsWith("class")) {
             dbwebchallengehandler.saveWebChallenge(name, type, file)
