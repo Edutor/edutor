@@ -4,6 +4,7 @@ echo "**********EXPORTING DEBIAN_FRONTEND**********"
 export DEBIAN_FRONTEND="noninteractive";
 
 echo "**********INSTALLING DEBCONF**********"
+sudo apt-get update
 sudo apt-get install -y debconf-utils
 
 echo "**********INSTALLING VIM**********"
@@ -38,5 +39,5 @@ sudo mysql -uroot -proot -e "CREATE USER 'edutor'@'localhost' IDENTIFIED BY 'Edu
 
 echo "**********RESTARTING MYSQL**********"
 sudo service mysql restart
-echo "mysql -uroot -proot edutor" > start_db
-chmod 755 start_db
+# echo "mysql -uroot -proot edutor" > start_db
+# chmod 755 start_db
